@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "docs"
+version = "0.1.0"
+description = ""
+authors = ["Xavier Lau <xavier@inv.cafe>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mkdocs-material = "^9.5.18"
+mkdocs-git-revision-date-localized-plugin = "^1.2.4"
+mkdocs-git-authors-plugin = "^0.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

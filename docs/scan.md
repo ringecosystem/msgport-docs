@@ -1,0 +1,3 @@
+# Msgport Scan
+
+Navigating through the multiple stages of cross-chain message transmission can be time-consuming as messages are delivered and processed by the receiving chain. Having a mechanism to track message status is essential for identifying whether they have been successfully dispatched or have encountered failures. For this purpose, we offer a user-friendly message explorer tool [Msgport Scan](https://msgscan.darwinia.network/) that enables the searching and viewing of message statuses and outcomes.
