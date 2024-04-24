@@ -1,0 +1,44 @@
+name: Deploy PR preview
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch latest code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build pages
+        run: |
+          pip3 install poetry
+          poetry run poetry install --no-root
+          poetry run mkdocs build
+      - name: Setup Vercel environment
+        uses: actions/checkout@v4
+        with:
+          repository: darwinia-network/devops
+          path: .github
+      - name: Deploy to Vercel
+        uses: ./.github/actions/smart-vercel
+        with:
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}
+          vercel_group: itering
+          preview_output: true
+          project_name: msgport-docs
+          dist_path: site
+          alias_domain: "msgport-docs-dev"
+          script_run: false
+          enable_cache: true
+          enable_notify_comment: true
+          enable_notify_slack: true
+          slack_channel: darwinia-document
+          slack_webhook: ${{ secrets.SLACK_INCOMING_WEBHOOK_URL }}
