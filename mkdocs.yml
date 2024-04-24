@@ -1,8 +1,8 @@
 site_name: Msgport Docs
 copyright: Copyright &copy; Msgport
-repo_url: https://github.com/docs
+repo_url: https://github.com/msgport/docs
 repo_name: docs
-edit_uri: https://github.com/docs/edit/main/docs
+edit_uri: https://github.com/msgport/docs/edit/main/docs
 theme:
   name: material
   logo: resource/pics/darwinia-logo.png
