@@ -1,4 +1,4 @@
-site_name: Msgport Docs
+site_name: Msgport Documentation
 copyright: Copyright &copy; Msgport
 repo_url: https://github.com/msgport/docs
 repo_name: docs
@@ -20,6 +20,7 @@ theme:
     - navigation.footer
     - navigation.indexes
     - navigation.sections
+    - navigation.tabs
     - navigation.top
     - navigation.tracking
     - search.highlight
@@ -119,27 +120,29 @@ plugins:
       enable_creation_date: true
 
 nav:
-  - Overview: "overview.md"
-  - Glossary: "glossary.md"
-  - Interfaces: "interfaces.md"
-  - Workflow: "workflow.md"
-  - API Documentation: "api.md"
-  - Message Scan: "scan.md"
-  - Messaging Protocols:
-      - Overview: "messaging-protocols/overview.md"
-      - ORMP Protocol: "messaging-protocols/ormp.md"
-      - XCMP Protocol: "messaging-protocols/xcmp.md"
-      - LCMP Protocol: "messaging-protocols/lcmp.md"
-  - Supported Networks: "networks.md"
-  - Use Cases:
-      - Overview: "use-cases/overview.md"
-      - Order Clearing: "use-cases/order-xclearing.md"
-      - XToken Management: "use-cases/xtoken.md"
-      - XAccount Operations: "use-cases/xaccount.md"
-      - XDAO Functions: "use-cases/xdao.md"
-  - Tutorials:
-      - Hello Message Using Remix: "tutorial/remix-demo.md"
-      - Message Script Demo: "tutorial/script-demo.md"
-  - RingDAO: "ring.md"
-  - FAQs: "faq.md"
-  - Troubleshooting: "troublesome.md"
+  - Home: "home.md"
+  - Learn Msgport:
+      - Glossary: "learn/glossary.md"
+      - Interfaces: "learn/interfaces.md"
+      - Workflow: "learn/workflow.md"
+      - API Documentation: "learn/api.md"
+      - Message Scan: "learn/scan.md"
+      - Supported Networks: "learn/networks.md"
+      - Messaging Protocols:
+          - Overview: "learn/messaging-protocols/overview.md"
+          - ORMP Protocol: "learn/messaging-protocols/ormp.md"
+          - XCMP Protocol: "learn/messaging-protocols/xcmp.md"
+          - LCMP Protocol: "learn/messaging-protocols/lcmp.md"
+      - FAQs: "learn/faq.md"
+      - Troubleshooting: "learn/troublesome.md"
+  - Build with Msgport:
+      - Use Cases:
+        - Overview: "build/use-cases/overview.md"
+        - Order Clearing: "build/use-cases/order-xclearing.md"
+        - XToken Management: "build/use-cases/xtoken.md"
+        - XAccount Operations: "build/use-cases/xaccount.md"
+        - XDAO Functions: "build/use-cases/xdao.md"
+      - Tutorials:
+        - Hello Message Using Remix: "build/tutorial/remix-demo.md"
+        - Message Script Demo: "build/tutorial/script-demo.md"
+  - RingDAO: "ring-dao.md"
