@@ -63,7 +63,7 @@ interface IPortMetadata {
 
 ## Application
 
-The `Application` contract is typically extended by the receiving application on the destination chain. This extension allows the receiving application to incorporate additional validation checks for the information contained in cross-chain messages. To see this implementation in action, you can examine the provided [runnable demo](https://github.com/darwinia-network/msgport-demo).
+The `Application` contract is typically extended by the receiving application on the destination chain. This extension allows the receiving application to incorporate additional validation checks for the information contained in cross-chain messages. To see this implementation in action, you can examine the provided [runnable demo](https://github.com/msgport/msgport-demo).
 
 ```solidity linenums="1" title="Application.sol"
 pragma solidity ^0.8.17;

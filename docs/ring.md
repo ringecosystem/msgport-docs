@@ -1,6 +1,6 @@
 # RING
 
-[**RING**](https://coinmarketcap.com/currencies/darwinia-network/) is the native and governance token of Darwinia Network and can also be used for gas fees on the Darwinia chains. It also serving to fund the on-chain treasury and incentive validators, collators, stakers etc.
+[**RING**](https://coinmarketcap.com/currencies/darwinia-network/) is the governance token of Msgport Networdators.
 
 ## Token Model
 

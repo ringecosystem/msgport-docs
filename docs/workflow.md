@@ -4,29 +4,29 @@ Within the diverse landscape of today's blockchain technology, each blockchain p
 
 For dApp developers looking to incorporate these cross-chain messaging protocols into their applications, a solid grasp of the underlying mechanics is crucial. This knowledge becomes particularly important when encountering unexpected issues during development, which can often be resolved with an awareness of how these complex systems operate.
 
-The purpose of this page is to provide you with a clear understanding of how the Msgport and [ORMP](../msgport/messaging-protocols/ormp.md) messaging protocols facilitate cross-chain interactions. By breaking down these protocols, we aim to demystify the process, making it more accessible for developers needing to integrate cross-chain functionality into their projects.
+The purpose of this page is to provide you with a clear understanding of how the Msgport and [ORMP](./messaging-protocols/ormp.md) messaging protocols facilitate cross-chain interactions. By breaking down these protocols, we aim to demystify the process, making it more accessible for developers needing to integrate cross-chain functionality into their projects.
 
 ## Verifying network support
 
-Before diving into the integration of the Darwinia Msgport protocol, the initial and critical step is to confirm whether the [Darwinia Msgport supports the network](../msgport/networks.md) you intend to use. If the network is supported, the integration process simplifies significantly, and your focus shifts to learning how to utilize the Msgport contract's capabilities for sending and receiving cross-chain messages. Typically, getting accustomed to these functions could take as little as half a day.
+Before diving into the integration of the Msgport protocol, the initial and critical step is to confirm whether the [Msgport supports the network](./networks.md) you intend to use. If the network is supported, the integration process simplifies significantly, and your focus shifts to learning how to utilize the Msgport contract's capabilities for sending and receiving cross-chain messages. Typically, getting accustomed to these functions could take as little as half a day.
 
-On the other hand, if the network is not currently supported, your first course of action should be to [reach out to the Darwinia team](https://t.me/DarwiniaNetwork) to inquire about potential future support. Alternatively, if you prefer a more hands-on approach, you have the option to develop and deploy the necessary contracts yourself and register them with the PortRegister.
+On the other hand, if the network is not currently supported, your first course of action should be to Msgport team to inquire about potential future support. Alternatively, if you prefer a more hands-on approach, you have the option to develop and deploy the necessary contracts yourself and register them with the PortRegister.
 
 ## Messaging workflow
 
 !!! note
-    For those interested in gaining a more in-depth understanding of how Msgport operates, there is a [runnable demo available](https://github.com/darwinia-network/msgport-demo) for reference. This can be a valuable resource to see the message port in action.
+    For those interested in gaining a more in-depth understanding of how Msgport operates, there is a [runnable demo available](https://github.com/msgport/msgport-demo) for reference. This can be a valuable resource to see the message port in action.
 
 ### Find the Port Contract Address
 
-After verifying that the Darwinia Msgport aligns with your project's objectives, the subsequent step is to locate the port contract address. If you're unfamiliar with the concept of a port contract, you can learn more by visiting **[this link](../msgport/glossary.md#port)**. There are two methods to acquire the appropriate port address:
+After verifying that the Msgport aligns with your project's objectives, the subsequent step is to locate the port contract address. If you're unfamiliar with the concept of a port contract, you can learn more by visiting **[this link](./glossary.md#port)**. There are two methods to acquire the appropriate port address:
 
-1. Check the [Supported Networks list](../msgport/networks.md) for the endpoint. The port addresses are standardized across all networks to enhance clarity and ease of use, and you can easily find this information there.
-2. Use the  `get(uint256 chainId, string calldata name)` function to consult the [PortRegistry](../msgport/glossary.md#portregistry) contract. By supplying the chainId and the specific protocol name, you can retrieve the endpoint for the target network. The PortRegistry contract is a detailed ledger of all registered port contracts, providing a trustworthy reference point.
+1. Check the [Supported Networks list](./networks.md) for the endpoint. The port addresses are standardized across all networks to enhance clarity and ease of use, and you can easily find this information there.
+2. Use the  `get(uint256 chainId, string calldata name)` function to consult the [PortRegistry](./glossary.md#portregistry) contract. By supplying the chainId and the specific protocol name, you can retrieve the endpoint for the target network. The PortRegistry contract is a detailed ledger of all registered port contracts, providing a trustworthy reference point.
 
 ### Build the receiver application in the target chain
 
-Integrating Msgport into the receiver application on the target chain is a straightforward process. Simply extend your contract to implement the [Application](../msgport/interfaces.md#application) interface, and then incorporate your business logic into the contract as usual. Below is a demo code snippet for your reference.
+Integrating Msgport into the receiver application on the target chain is a straightforward process. Simply extend your contract to implement the [Application](./interfaces.md#application) interface, and then incorporate your business logic into the contract as usual. Below is a demo code snippet for your reference.
 
 ```solidity linenums="1" title="TestReceiver.sol"
 pragma solidity ^0.8.17;
@@ -72,7 +72,7 @@ Prior to initiating a cross chain transaction, it's essential to determine the c
 
 Message fees play a critical role in the design of a cross-chain messaging protocol. They represent not just the cost of incorporating cross-chain functionality into your applications, but they also impact the user experience of your application. A thoughtfully constructed fee mechanism is crucial for success.
 
-The fee structure for Msgport is implemented through the [Msgport API](https://github.com/darwinia-network/darwinia-msgport-api). For detailed information on the fee design, please refer to the [Msgport API Document](../msgport/api.md). Additionally, you can explore the [Pangolin > Sepolia Message Demo](../msgport/tutorial/script-demo.md) to see how the fee mechanism is applied in practice.
+The fee structure for Msgport is implemented through the [Msgport API](https://github.com/msgport/msgport-api). For detailed information on the fee design, please refer to the [Msgport API Document](./api.md). Additionally, you can explore the [Pangolin > Sepolia Message Demo](./tutorial/script-demo.md) to see how the fee mechanism is applied in practice.
 
 ### Send message in source chain application
 
@@ -109,5 +109,5 @@ By invoking the **`send`** function within the TestSender demo with the parame
 
 ### Monitor the message status
 
-The delivery and execution of your message on the target chain may take approximately 5 to 15 minutes. To monitor the status of your message, we offer a scanning tool [Darwinia Messages Explorer](https://msgscan.darwinia.network/) that allows you to track the progress using your sent message's transaction hash or the message hash itself.
+The delivery and execution of your message on the target chain may take approximately 5 to 15 minutes. To monitor the status of your message, we offer a scanning tool [Messages Explorer](https://msgscan.darwinia.network/) that allows you to track the progress using your sent message's transaction hash or the message hash itself.
 
