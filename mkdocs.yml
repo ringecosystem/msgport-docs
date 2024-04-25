@@ -1,7 +1,7 @@
 site_name: Msgport Documentation
 copyright: Copyright &copy; Msgport
 repo_url: https://github.com/msgport/docs
-repo_name: docs
+repo_name: msgport-docs
 edit_uri: https://github.com/msgport/docs/edit/main/docs
 theme:
   name: material
@@ -120,7 +120,7 @@ plugins:
       enable_creation_date: true
 
 nav:
-  - Home: "home.md"
+  - Home: "index.md"
   - Learn Msgport:
       - Glossary: "learn/glossary.md"
       - Interfaces: "learn/interfaces.md"
