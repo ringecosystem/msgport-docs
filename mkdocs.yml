@@ -119,7 +119,7 @@ plugins:
       enable_creation_date: true
 
 nav:
-  - Home: "index.md"
+  - Overview: "overview.md"
   - Glossary: "glossary.md"
   - Interfaces: "interfaces.md"
   - Workflow: "workflow.md"

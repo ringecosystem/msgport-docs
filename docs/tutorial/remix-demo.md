@@ -75,18 +75,18 @@ contract TestSender {
 
 ```
 
-![msgport-tutorial-remix-1](../../images/msgport-tutorial-remix-1.png)
+![msgport-tutorial-remix-1](../images/msgport-tutorial-remix-1.png)
 
 ### Deploy The TestSender
 
 After successfully compiling **`TestSender.sol`**, the next step is to deploy it on the Pangolin testnet. Switch your wallet to the Pangolin network, if you need information on how to do this, consult the [network details](../../evm/chains/pangolin.md#network-info). The contract requires a parameter for the constructor **`address port`**, which is the address of the ORMP port, a constant across all networks. Enter **`0x0000000005d961F950adA391C1511c92bbc64D9F`** as the parameter and click the deploy button to deploy the contract on the Pangolin testnet. To monitor the transaction status, you may also visit the [Pangolin Subscan](https://pangolin.subscan.io/).
 
 
-![msgport-tutorial-remix-2](../../images/msgport-tutorial-remix-2.png)
+![msgport-tutorial-remix-2](../images/msgport-tutorial-remix-2.png)
 
 ### Send Message
 
-![msgport-tutorial-remix-3](../../images/msgport-tutorial-remix-3.png)
+![msgport-tutorial-remix-3](../images/msgport-tutorial-remix-3.png)
 
 The most thrilling part of the process is invoking the **`send(uint256 toChainId, address toDapp, bytes calldata message, bytes calldata params)`** method on the TestSender contract, which will initiate the cross-chain message transmission. The parameters for this call are somewhat complex, so let's break them down for clarity:
 
@@ -108,7 +108,7 @@ After setting up the required parameters, proceed to click the transact button t
 A [msgport scan](https://www.notion.so/Msgport-Scan-20e10e1727de4b07baaee0c7e1e3f627?pvs=21) available to monitor the status of cross-chain messages, offering the ability to index messages by either the transaction hash or the msghash. Typically, querying with the transaction hash is the most convenient approach.
 
 
-![msgport-tutorial-remix-4](../../images/msgport-tutorial-remix-4.png)
+![msgport-tutorial-remix-4](../images/msgport-tutorial-remix-4.png)
 
 ## Check In The TestReceiver
 

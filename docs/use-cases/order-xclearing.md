@@ -15,7 +15,7 @@ The Helix Bridge protocol introduces a permissionless system for liquidity relay
 
 Should a liquidity relayer fail to fulfill the order promptly, a "slasher" can step in to complete the order. This action is recorded in the clearing contracts. Slashers can trigger a claim against the liquidity relayer's penalty reserve by sending penalty-related clearing messages. Settlement occurs when the liquidity relayer attempts to withdraw from the penalty reserve, also through a message-sending process.
 
-![msgport-token-bridge-1](../../images/msgport-token-bridge-1.png)
+![msgport-token-bridge-1](../images/msgport-token-bridge-1.png)
 
 ## Summary
 Msgport plays a pivotal role in Helix Bridge by enabling efficient batch clearing and communication for liquidity relayers, leading to significantly reduced cross-chain fees. It allows for the seamless execution of orders and the swift resolution of disputes through the intervention of "slashers" when orders are not fulfilled as expected. Beyond token swaps, the flexibility and efficiency of Msgport can be extended to a wide range of use cases in cross chain orders senarios.

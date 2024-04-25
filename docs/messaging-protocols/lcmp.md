@@ -6,7 +6,7 @@
 
 LCMP, short for Light Client Cross-Chain Messaging Protocol, is a protocol meticulously designed and developed by the Darwinia core team. It is currently being actively utilized within Darwinia's chains. This protocol enables seamless communication between different blockchains by establishing messaging channels between them.
 
-![msgport-lcmp-1](../../images/msgport-lcmp-1.png)
+![msgport-lcmp-1](../images/msgport-lcmp-1.png)
 
 The LCMP protocol consists of two layers, as shown in the diagram above. The first layer, known as the truth layer, incorporates the light client functionality. This layer is responsible for ensuring the integrity and validity of the cross-chain messages. The protocol derives its name from this layer, which plays a crucial role in maintaining the trustworthiness of the communication. The second layer of the LCMP protocol is the message layer. This layer is specifically designed to handle various aspects related to cross-chain messages. It takes care of issues such as message formatting, transaction fees, and other relevant considerations. By addressing these concerns, the message layer streamlines the process of sending and receiving cross-chain messages, enhancing the overall efficiency and effectiveness of the protocol.
 
@@ -14,7 +14,7 @@ The LCMP protocol consists of two layers, as shown in the diagram above. The fir
 
 To facilitate a comprehensive understanding of the message flow, it is important to establish the assumption that the truth layer is functioning as intended. Without a properly functioning truth layer, it becomes impractical to delve into the intricacies of the message layer. This is because the truth layer plays a critical role in providing essential validation services for the message layer. If the truth layer is compromised or broken, it renders the execution of cross-chain messages on the target chain impossible, even if the messages successfully reach their intended destination.
 
-![msgport-lcmp-2](../../images/msgport-lcmp-2.png)
+![msgport-lcmp-2](../images/msgport-lcmp-2.png)
 
 Let's break down and expand upon the steps depicted in the diagram:
 
