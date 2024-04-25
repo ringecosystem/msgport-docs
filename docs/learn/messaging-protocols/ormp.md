@@ -21,7 +21,7 @@ These two roles play a vital role in the entire process of sending, verifying, a
 
 ## Messaging Design
 
-![msgport-ormp-1](../images/msgport-ormp-1.png)
+![msgport-ormp-1](../../images/msgport-ormp-1.png)
 
 ### Raw Message Structure
 

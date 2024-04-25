@@ -142,7 +142,7 @@ nav:
         - XToken Management: "build/use-cases/xtoken.md"
         - XAccount Operations: "build/use-cases/xaccount.md"
         - XDAO Functions: "build/use-cases/xdao.md"
-      - Tutorials:
+      - Tutorial:
         - Hello Message Using Remix: "build/tutorial/remix-demo.md"
         - Message Script Demo: "build/tutorial/script-demo.md"
   - RingDAO: "ring-dao.md"
