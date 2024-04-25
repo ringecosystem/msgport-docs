@@ -1,6 +1,6 @@
 # RING
 
-[**RING**](https://coinmarketcap.com/currencies/darwinia-network/) is the governance token of Msgport Networdators.
+[**RING**](https://coinmarketcap.com/currencies/darwinia-network/) is the governance token of Msgport.
 
 ## Token Model
 
