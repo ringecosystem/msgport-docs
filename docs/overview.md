@@ -1,9 +1,9 @@
 # Overview
 
-In the evolving landscape of blockchain technology, the need for interoperability and seamless communication between diverse blockchains has never been more critical. Msgport, a groundbreaking initiative by Darwinia, stands at the forefront of this challenge, offering a robust solution for cross-chain messaging. With a focus on facilitating effortless asset and information transfer across blockchains, Msgport is revolutionizing the way applications communicate in web 3.0.
+In the evolving landscape of blockchain technology, the need for interoperability and seamless communication between diverse blockchains has never been more critical. Msgport, stands at the forefront of this challenge, offering a robust solution for cross-chain messaging. With a focus on facilitating effortless asset and information transfer across blockchains, Msgport is revolutionizing the way applications communicate in web 3.0.
 
 ## Core Components and Innovations
-The Darwinia Msgport encompasses a collection of smart contracts that outline standardized interfaces for facilitating a cross-chain messaging protocol. 
+The Msgport encompasses a collection of smart contracts that outline standardized interfaces for facilitating a cross-chain messaging protocol. 
 
 At the heart of this system is the core interface, [IMessagePort](./interfaces.md#imessageport), which is designed with flexibility to support various implementations. 
 
