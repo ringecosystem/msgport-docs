@@ -5,8 +5,8 @@ repo_name: msgport-docs
 edit_uri: https://github.com/msgport/docs/edit/main/docs
 theme:
   name: material
-  logo: resource/pics/darwinia-logo.png
-  favicon: resource/pics/background.png
+  logo: resource/pics/msgport-logo.png
+  favicon: resource/pics/favicon.png
   font:
     text: San Francisco
     code: SFMono-Regular
@@ -145,4 +145,4 @@ nav:
       - Tutorial:
         - Hello Message Using Remix: "build/tutorial/remix-demo.md"
         - Message Script Demo: "build/tutorial/script-demo.md"
-  - RingDAO: "ring-dao.md"
+  - Community: "community/ringdao.md"
