@@ -5,7 +5,7 @@ repo_name: msgport-docs
 edit_uri: https://github.com/msgport/docs/edit/main/docs
 theme:
   name: material
-  logo: resource/pics/msgport-logo.png
+  logo: resource/pics/msgport-logo.svg
   favicon: resource/pics/favicon.png
   font:
     text: San Francisco
