@@ -1,4 +1,4 @@
-# FAQ
+# FAQs
 
 ## Which networks are currently supported by the Msgport?
 

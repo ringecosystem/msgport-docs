@@ -1,4 +1,4 @@
-# Msgport Glossary
+# Glossary
 
 ## Port
 

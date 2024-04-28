@@ -1,4 +1,4 @@
-#XToken
+# XToken Management
 
 XToken is a cross-chain token issuance and mapping tool. It can be used by issuers on the source/target chains to deploy and construct cross-chain bridge mappings for tokens. Additionally, it serves as a tool for custodian issuers to deploy Custodian DApps, enabling users to cross-chain the mapped tokens supported by that DApp.
 
@@ -6,10 +6,7 @@ Msgport can be utilized by XToken to facilitate cross-chain issuance after the o
 
 References:
 
-1. [XToken](https://xtoken.helixbridge.app/)
-
-2. [XToken Docs](https://docs.helixbridge.app/helixbridge/mapping_token)
-
-3. [XToken Contracts](https://github.com/helix-bridge/contracts/tree/master/helix-contract/contracts/xtoken)
-
-4. [XToken Monorepo](https://github.com/helix-bridge/xtoken-monorepo)
+* [XToken](https://xtoken.helixbridge.app/)
+* [XToken Docs](https://docs.helixbridge.app/helixbridge/mapping_token)
+* [XToken Contracts](https://github.com/helix-bridge/contracts/tree/master/helix-contract/contracts/xtoken)
+* [XToken Monorepo](https://github.com/helix-bridge/xtoken-monorepo)

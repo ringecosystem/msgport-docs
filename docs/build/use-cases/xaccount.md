@@ -1,4 +1,4 @@
-# XAccount
+# XAccount Operations
 
 XAccount, representing Cross-Chain Abstract Account, embodies a pioneering approach to account abstraction at the cross-chain level. This innovative concept introduces the creation of a counterpart account on the target chain for an existing account on the source chain, which remains under the exclusive control of the original address on the source chain.
 

@@ -1,4 +1,4 @@
-# ORMP
+# ORMP Protocol
 
 ORMP stands for Oracle Relayer Messaging Protocol. It is an omni-chain messaging protocol that can be used to build decentralized applications, or Dapps, that operate across multiple blockchains with minimal effort for developers. It's named after the two important roles involved in message cross-chaining:
 

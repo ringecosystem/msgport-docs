@@ -1,4 +1,4 @@
-site_name: Msgport Documentation
+site_name: Msgport Docs
 copyright: Copyright &copy; Msgport
 repo_url: https://github.com/msgport/docs
 repo_name: msgport-docs
@@ -144,5 +144,5 @@ nav:
         - XDAO Functions: "build/use-cases/xdao.md"
       - Tutorial:
         - Hello Message Using Remix: "build/tutorial/remix-demo.md"
-        - Message Script Demo: "build/tutorial/script-demo.md"
+        - Hello Message Using Script: "build/tutorial/script-demo.md"
   - Community: "community/ringdao.md"

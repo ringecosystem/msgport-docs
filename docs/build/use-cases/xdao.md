@@ -1,4 +1,4 @@
-# XDAO
+# XDAO Functions
 
 XDAO represents Multi-Chain DAO Governance, with DAO standing for Decentralized Autonomous Organizations. Msgport empowers DAOs to establish unified governance mechanisms across multiple chains.
 
