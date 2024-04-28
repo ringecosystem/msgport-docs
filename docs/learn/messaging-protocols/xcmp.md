@@ -1,4 +1,4 @@
-# XCMP
+# XCMP Protocol
 
 XCMP, or [Cross-Consensus Message Passing](https://wiki.polkadot.network/docs/learn-xcm), is a crucial technology for the Polkadot network. It makes it possible for the different blockchains within Polkadot, known as parachains, to talk to each other securely and without trouble. This is a big win for working together across the network. But sometimes, these parachains want to reach out beyond Polkadot, especially to talk with Ethereum's blockchain. To do this, they can't use XCMP and need a different kind of messaging bridge.
 

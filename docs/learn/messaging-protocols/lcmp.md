@@ -1,8 +1,7 @@
+# LCMP Protocol
+
 !!! Warning
     LCMP protocol served as a foundational prototype and remains in a testing stage, not yet deployed in a live production environment.
-
-
-# Overview
 
 LCMP, short for Light Client Cross-Chain Messaging Protocol, is a protocol meticulously designed and developed by the Darwinia core team. It is currently being actively utilized within Darwinia's chains. This protocol enables seamless communication between different blockchains by establishing messaging channels between them.
 

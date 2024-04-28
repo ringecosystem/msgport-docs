@@ -1,4 +1,4 @@
-# Msgport API
+# API
 
 !!! note
     If you're looking to explore the workings of the Msgport API more thoroughly, there is [a runnable demo](../build/tutorial/script-demo.md) at your disposal. This practical example serves as an excellent resource to witness the Msgport API's functionality in real-time.
