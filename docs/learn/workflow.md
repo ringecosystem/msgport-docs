@@ -109,5 +109,5 @@ By invoking the **`send`** function within the TestSender demo with the parame
 
 ### Monitor the message status
 
-The delivery and execution of your message on the target chain may take approximately 5 to 15 minutes. To monitor the status of your message, we offer a scanning tool [Messages Explorer](https://msgscan.darwinia.network/) that allows you to track the progress using your sent message's transaction hash or the message hash itself.
+The delivery and execution of your message on the target chain may take approximately 5 to 15 minutes. To monitor the status of your message, we offer a scanning tool [Messages Scan](https://scan.msgport.xyz/) that allows you to track the progress using your sent message's transaction hash or the message hash itself.
 
