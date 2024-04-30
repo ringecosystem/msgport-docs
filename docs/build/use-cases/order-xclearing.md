@@ -2,7 +2,7 @@
 
 Many use cases involve order clearing, such as order book DEXs, swap DEXs, equivalent swap, NFT markets, and more. These use cases can all be extended to cross-chain scenarios. Helix Bridge is one such example. It is a third-party token bridge that allows users to perform cross-chain swaps with liquidity relayers, serving as permissionless order takers and makers, essentially facilitating order based cross-chain equivalent swap. 
 
-For example, [Helix Bridge](https://helixbridge.app/) leverages [Msgport](../../index.md) to do settements after users taking orders of liquidity relayer. Msgport can deliver messages indicating that whether liquidity relayer fullfill user's order successfullly or not, where truth of messages are verified by the underlining message protocols Msgport are integrating.
+For example, [Helix Bridge](https://helixbridge.app/) leverages [Msgport](../../learn/index.md) to do settements after users taking orders of liquidity relayer. Msgport can deliver messages indicating that whether liquidity relayer fullfill user's order successfullly or not, where truth of messages are verified by the underlining message protocols Msgport are integrating.
 
 !!! Quote
     The advantage of using `Msgport` is that it is very easy to switch between different low-level message layers without making big changes to the code. — Helix Bridge
