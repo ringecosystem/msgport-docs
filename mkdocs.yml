@@ -121,7 +121,7 @@ plugins:
 
 nav:
   - Learn Msgport:
-      - Overview: "learn/index.md"
+      - Overview: "index.md"
       - Glossary: "learn/glossary.md"
       - Interfaces: "learn/interfaces.md"
       - Workflow: "learn/workflow.md"
