@@ -120,8 +120,8 @@ plugins:
       enable_creation_date: true
 
 nav:
-  - Home: "index.md"
   - Learn Msgport:
+      - Overview: "learn/index.md"
       - Glossary: "learn/glossary.md"
       - Interfaces: "learn/interfaces.md"
       - Workflow: "learn/workflow.md"
