@@ -56,6 +56,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/msgport
+  extra:
+  analytics:
+    provider: google
+    property: G-4FS95WZ91T
 extra_css:
   - resource/stylesheets/extra.css
 
