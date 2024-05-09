@@ -126,10 +126,10 @@ plugins:
   - redirects:
       redirect_maps:
         "learn/networks.md": 'build/networks.md'
-        "learn/interfaces.md": "learn/interfaces.md"
-        "learn/workflow.md": "learn/workflow.md"
-        "learn/api.md": "learn/api.md"
-        "learn/scan.md": "learn/scan.md"
+        "learn/interfaces.md": "build/interfaces.md"
+        "learn/workflow.md": "build/workflow.md"
+        "learn/api.md": "build/api.md"
+        "learn/scan.md": "build/scan.md"
         "build/use-cases/overview.md": "learn/use-cases/overview.md"
         "build/use-cases/order-xclearing.md": "learn/use-cases/order-xclearing.md"
         "build/use-cases/xtoken.md": "learn/use-cases/xtoken.md"

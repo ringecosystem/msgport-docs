@@ -91,7 +91,7 @@ After successfully compiling **`TestSender.sol`**, the next step is to deploy i
 The most thrilling part of the process is invoking the **`send(uint256 toChainId, address toDapp, bytes calldata message, bytes calldata params)`** method on the TestSender contract, which will initiate the cross-chain message transmission. The parameters for this call are somewhat complex, so let's break them down for clarity:
 
 1. value: `2000000000000000000`
-    - The cross-chain message fee. For the purpose of this demonstration, we'll employ a hardcoded cross-chain message fee that exceeds the normal rate to ensure reliability. In practical scenarios, the fee should be determined by the [msgport API](../../learn/api.md).
+    - The cross-chain message fee. For the purpose of this demonstration, we'll employ a hardcoded cross-chain message fee that exceeds the normal rate to ensure reliability. In practical scenarios, the fee should be determined by the [msgport API](../api.md).
 2. toChainId: **`11155111`**
     - The Sepolia chain ID.
 3. toDapp: **`0xb115B479ef7cBAEae5a69Aae93ADb0287ADaA32c`**, 
@@ -105,7 +105,7 @@ After setting up the required parameters, proceed to click the transact button t
 
 ## Check Message Status
 
-A [msgport scan](../../learn/scan.md) available to monitor the status of cross-chain messages, offering the ability to index messages by either the transaction hash or the msghash. Typically, querying with the transaction hash is the most convenient approach.
+A [msgport scan](../scan.md) available to monitor the status of cross-chain messages, offering the ability to index messages by either the transaction hash or the msghash. Typically, querying with the transaction hash is the most convenient approach.
 
 
 ![msgport-tutorial-remix-4](../../images/msgport-tutorial-remix-4.png)

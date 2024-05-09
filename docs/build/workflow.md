@@ -4,7 +4,7 @@ Within the diverse landscape of today's blockchain technology, each blockchain p
 
 For dApp developers looking to incorporate these cross-chain messaging protocols into their applications, a solid grasp of the underlying mechanics is crucial. This knowledge becomes particularly important when encountering unexpected issues during development, which can often be resolved with an awareness of how these complex systems operate.
 
-The purpose of this page is to provide you with a clear understanding of how the Msgport and [ORMP](./messaging-protocols/ormp.md) messaging protocols facilitate cross-chain interactions. By breaking down these protocols, we aim to demystify the process, making it more accessible for developers needing to integrate cross-chain functionality into their projects.
+The purpose of this page is to provide you with a clear understanding of how the Msgport and [ORMP](../learn/messaging-protocols/ormp.md) messaging protocols facilitate cross-chain interactions. By breaking down these protocols, we aim to demystify the process, making it more accessible for developers needing to integrate cross-chain functionality into their projects.
 
 ## Verifying network support
 
@@ -19,10 +19,10 @@ On the other hand, if the network is not currently supported, your first course 
 
 ### Find the Port Contract Address
 
-After verifying that the Msgport aligns with your project's objectives, the subsequent step is to locate the port contract address. If you're unfamiliar with the concept of a port contract, you can learn more by visiting **[this link](./glossary.md#port)**. There are two methods to acquire the appropriate port address:
+After verifying that the Msgport aligns with your project's objectives, the subsequent step is to locate the port contract address. If you're unfamiliar with the concept of a port contract, you can learn more by visiting **[this link](../learn/glossary.md#port)**. There are two methods to acquire the appropriate port address:
 
 1. Check the [Supported Networks list](./networks.md) for the endpoint. The port addresses are standardized across all networks to enhance clarity and ease of use, and you can easily find this information there.
-2. Use the  `get(uint256 chainId, string calldata name)` function to consult the [PortRegistry](./glossary.md#portregistry) contract. By supplying the chainId and the specific protocol name, you can retrieve the endpoint for the target network. The PortRegistry contract is a detailed ledger of all registered port contracts, providing a trustworthy reference point.
+2. Use the  `get(uint256 chainId, string calldata name)` function to consult the [PortRegistry](../learn/glossary.md#portregistry) contract. By supplying the chainId and the specific protocol name, you can retrieve the endpoint for the target network. The PortRegistry contract is a detailed ledger of all registered port contracts, providing a trustworthy reference point.
 
 ### Build the receiver application in the target chain
 

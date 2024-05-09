@@ -2,7 +2,7 @@
 
 ## Which networks are currently supported by the Msgport?
 
-To find out which networks are currently compatible with the Msgport, you can view the list of supported networks **[here](./networks.md)**. The Msgport core team is actively working to expand this list and connect additional networks. Keep an eye on updates to stay informed about new integrations.
+To find out which networks are currently compatible with the Msgport, you can view the list of supported networks **[here](../build/networks.md)**. The Msgport core team is actively working to expand this list and connect additional networks. Keep an eye on updates to stay informed about new integrations.
 
 ## What are the network requirements to support Msgport?
 

@@ -48,7 +48,7 @@ Please be aware that within the channel, all messages are organized in an increm
 
 ### Message Sending Flow
 
-1. The cross-chain application, built on the msgport interface **[IMessagePort](../interfaces.md#imessageport)**, invokes the **`send(from, toChainId, to, gasLimit, encoded_call)`** method of the ORMP. This method is a payable method, meaning it requires the payment of a specific fee to execute. The fee structure is further explained below.
+1. The cross-chain application, built on the msgport interface **[IMessagePort](../../build/interfaces.md#imessageport)**, invokes the **`send(from, toChainId, to, gasLimit, encoded_call)`** method of the ORMP. This method is a payable method, meaning it requires the payment of a specific fee to execute. The fee structure is further explained below.
 2. Upon receiving the message, the ORMP contracts store it in an Incremental Merkle Tree, emit the `MessageAccepted` event and return msgHash to the sender as the an identifier for that message. 
 3. The ORMP contracts then invoke the specified relayer and oracle that have been previously registered with the protocol, emitting the `OracleAssigned` and `RelayerAssigned` event to signal the start of their respective tasks.
 
@@ -76,7 +76,7 @@ If the validation is successful, the message is then sent to the corresponding u
 
 ##  Cross-chain Fee
 
-The fee for cross-chain messaging is paid in the native token of the source chain. The application can retrieve the cross-chain fee by calling the **`fee`** function in the **[IMessagePort](../interfaces.md#imessageport)** interface.
+The fee for cross-chain messaging is paid in the native token of the source chain. The application can retrieve the cross-chain fee by calling the **`fee`** function in the **[IMessagePort](../../build/interfaces.md#imessageport)** interface.
 
 $$
 Fee = OracleFee + RelayingFee
