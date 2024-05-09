@@ -56,6 +56,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/msgport
+  extra:
+  analytics:
+    provider: google
+    property: G-4FS95WZ91T
 extra_css:
   - resource/stylesheets/extra.css
 
@@ -119,31 +123,41 @@ plugins:
   - git-revision-date-localized:
       fallback_to_build_date: false
       enable_creation_date: true
-
+  - redirects:
+      redirect_maps:
+        "learn/networks.md": 'build/networks.md'
+        "learn/interfaces.md": "build/interfaces.md"
+        "learn/workflow.md": "build/workflow.md"
+        "learn/api.md": "build/api.md"
+        "learn/scan.md": "build/scan.md"
+        "build/use-cases/overview.md": "learn/use-cases/overview.md"
+        "build/use-cases/order-xclearing.md": "learn/use-cases/order-xclearing.md"
+        "build/use-cases/xtoken.md": "learn/use-cases/xtoken.md"
+        "build/use-cases/xaccount.md": "learn/use-cases/xaccount.md"
+        "build/use-cases/xdao.md": "learn/use-cases/xdao.md"
 nav:
-  - Learn Msgport:
-      - Overview: "index.md"
-      - Glossary: "learn/glossary.md"
-      - Interfaces: "learn/interfaces.md"
-      - Workflow: "learn/workflow.md"
-      - API Documentation: "learn/api.md"
-      - Message Scan: "learn/scan.md"
-      - Supported Networks: "learn/networks.md"
-      - Messaging Protocols:
+  - What is Msgport:
+      - What is Msgport: "index.md"
+      - Supported Protocols:
           - Overview: "learn/messaging-protocols/overview.md"
           - ORMP Protocol: "learn/messaging-protocols/ormp.md"
           - XCMP Protocol: "learn/messaging-protocols/xcmp.md"
           - LCMP Protocol: "learn/messaging-protocols/lcmp.md"
-      - FAQs: "learn/faq.md"
-      - Troubleshooting: "learn/troublesome.md"
-  - Build with Msgport:
       - Use Cases:
-        - Overview: "build/use-cases/overview.md"
-        - Order Clearing: "build/use-cases/order-xclearing.md"
-        - XToken Management: "build/use-cases/xtoken.md"
-        - XAccount Operations: "build/use-cases/xaccount.md"
-        - XDAO Functions: "build/use-cases/xdao.md"
+        - Overview: "learn/use-cases/overview.md"
+        - Order Clearing: "learn/use-cases/order-xclearing.md"
+        - XToken Management: "learn/use-cases/xtoken.md"
+        - XAccount Operations: "learn/use-cases/xaccount.md"
+        - XDAO Functions: "learn/use-cases/xdao.md"
+      - Glossary: "learn/glossary.md"
+      - FAQ: "learn/faq.md"
+  - Developers:
+      - Supported Networks: "build/networks.md"
+      - Interfaces: "build/interfaces.md"
+      - Workflow: "build/workflow.md"
+      - API Documentation: "build/api.md"
+      - Message Scan: "build/scan.md"
       - Tutorial:
-        - Hello Message Using Remix: "build/tutorial/remix-demo.md"
-        - Hello Message Using Script: "build/tutorial/script-demo.md"
+        - Send Cross-Chain Messages Using Remix: "build/tutorial/remix-demo.md"
+        - Send Cross-Chain Messages Using Script: "build/tutorial/script-demo.md"
   - Community: "community/ringdao.md"
