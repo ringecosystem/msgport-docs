@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://docs.msgport.xyz/sitemap.xml
