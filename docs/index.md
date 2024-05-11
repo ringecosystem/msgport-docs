@@ -1,6 +1,6 @@
-# What is Msgport
+# What is Msgport?
 
-In the evolving landscape of blockchain technology, the need for interoperability and seamless communication between diverse blockchains has never been more critical. Msgport, stands at the forefront of this challenge, offering a robust solution for cross-chain messaging. With a focus on facilitating effortless asset and information transfer across blockchains, Msgport is revolutionizing the way applications communicate in web 3.0.
+Msgport gets its name from hubs of connectivity, such as airports, seaports, and spaceports, because it serves as a gateway for messages between different blockchain systems. By acting as a crucial hub, Msgport enables the connection of various blockchain systems with minimal changes to their underlying architecture. Specifically, Msgport defines a set of [essential interfaces](./build/interfaces.md) for cross-chain communication, including sending, receiving, and verifying messages. This is similar to a superclass or abstract class in programming, which outlines a template for functionality. Concrete implementations of Msgport, known as [messaging protocols](./learn/messaging-protocols/overview.md), may vary to accommodate the unique designs of different underlying blockchains. However, as long as an implementation adheres to the Msgport interfaces, it can be used interchangeably, making it easier for developers to create cross-chain decentralized applications.
 
 ## Core Components and Innovations
 
@@ -20,7 +20,3 @@ These implementations underscore Msgport's commitment to fostering interoperabil
 
 ## Integration and Understanding
 For developers and applications eager to leverage the power of Msgport, the journey begins with the [Msgport Workflow Documentation](./build/workflow.md) and a series of comprehensive [Tutorials](./build/tutorial/remix-demo.md). These resources are meticulously crafted to demystify the complexities of Msgport, offering a clear path to integration. From foundational knowledge to step-by-step guides, developers can expect a seamless onboarding experience, enabling them to harness the full potential of cross-chain messaging.
-
-## Embracing the Future
-
-As the digital world continues to evolve, Msgport stands as a beacon of innovation, guiding the way towards a more interconnected and efficient blockchain ecosystem. Whether you are looking to bridge assets or enhance the capabilities of your blockchain application, Msgport offers the tools and support needed to transcend traditional boundaries and embrace the future of cross-chain communication.

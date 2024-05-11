@@ -139,7 +139,7 @@ plugins:
 nav:
   - Learn:
       - What is Msgport?: "index.md"
-      - Supported Protocols:
+      - Messaging Protocols:
           - Overview: "learn/messaging-protocols/overview.md"
           - ORMP Protocol: "learn/messaging-protocols/ormp.md"
           - XCMP Protocol: "learn/messaging-protocols/xcmp.md"
