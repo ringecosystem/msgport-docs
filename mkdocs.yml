@@ -153,10 +153,10 @@ nav:
       - FAQ: "learn/faq.md"
   - Developers:
       - Supported Networks: "build/networks.md"
-      - Interfaces: "build/interfaces.md"
-      - Workflow: "build/workflow.md"
-      - API Documentation: "build/api.md"
+      - Core Interfaces: "build/interfaces.md"
+      - Message Workflow: "build/workflow.md"
       - Message Scan: "build/scan.md"
+      - API Documentation: "build/api.md"
       - Tutorial:
         - Send Cross-Chain Messages Using Remix: "build/tutorial/remix-demo.md"
         - Send Cross-Chain Messages Using Script: "build/tutorial/script-demo.md"
