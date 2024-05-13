@@ -139,6 +139,7 @@ plugins:
 nav:
   - Learn:
       - What is Msgport?: "index.md"
+      - Architecture: "learn/architecture.md"
       - Messaging Protocols:
           - Overview: "learn/messaging-protocols/overview.md"
           - ORMP Protocol: "learn/messaging-protocols/ormp.md"
