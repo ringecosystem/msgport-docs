@@ -1,7 +1,7 @@
-# XDAO Functions
+# Cross Chain DAOs
 
-XDAO represents Multi-Chain DAO Governance, with DAO standing for Decentralized Autonomous Organizations. Msgport empowers DAOs to establish unified governance mechanisms across multiple chains.
+DAO stands for Decentralized Autonomous Organization. Msgport enables DAOs to establish unified governance mechanisms across multiple blockchain networks. 
 
 Organizations like Uniswap, which may operate DApps across several chains, find their governance tokens distributed across different blockchains. Typically, a DAO conducts voting with its governance token on a single chain, making decisions on proposals that, once approved, are to be implemented across other chains. This scenario presents two main challenges: firstly, enabling governance tokens on other chains to participate in the voting, and secondly, implementing proposals across these diverse chains.
 
-To tackle the first challenge, the DAO's governor contract within voting systems (e.g. [Tally](https://www.tally.xyz/explore)) can be modified to enable cross-chain delegation or the configuration of votes via Msgport. As for the second challenge, proposals can be executed on different chains by creating and utilizing an [xAccount](./xaccount.md). This approach significantly simplifies decision-making and coordination for DAOs, eliminating the complexity of managing operations on multiple chains independently.
+To tackle the first challenge, the DAO's governor contract within voting systems (e.g. [Tally](https://www.tally.xyz/explore)) can be modified to enable cross-chain delegation or the configuration of votes via Msgport. As for the second challenge, proposals can be executed on different chains by creating and utilizing an [XAccount](./xaccount.md). This approach significantly simplifies decision-making and coordination for DAOs, eliminating the complexity of managing operations on multiple chains independently.

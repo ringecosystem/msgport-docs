@@ -149,10 +149,10 @@ nav:
           - LCMP Protocol: "learn/messaging-protocols/lcmp.md"
       - Use Cases:
         - Overview: "learn/use-cases/overview.md"
+        - Cross-Chain Abstract Account: "learn/use-cases/xaccount.md"
+        - Cross-Chain DAOs: "learn/use-cases/xdao.md"
+        - Cross-Chain Tokens: "learn/use-cases/xtoken.md"
         - Order Clearing: "learn/use-cases/order-xclearing.md"
-        - XToken Management: "learn/use-cases/xtoken.md"
-        - XAccount Operations: "learn/use-cases/xaccount.md"
-        - XDAO Functions: "learn/use-cases/xdao.md"
       - Glossary: "learn/glossary.md"
       - FAQ: "learn/faq.md"
   - Developers:
