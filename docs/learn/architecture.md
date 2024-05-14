@@ -6,12 +6,12 @@ As a result, applications seeking to provide services across multiple chains mus
 
 ![architecture](../images/architecture.png)
 
-At the heart of this system is the core interface, [IMessagePort](./build/interfaces.md#imessageport), designed with flexibility to support various implementations, known as messaging protocols. Applications integrated with Msgport can quickly switch between different messaging protocols, leveraging the benefits of each, such as lower cross-chain message fees or enhanced security.
+At the heart of this system is the core interface, [IMessagePort](../build/interfaces.md#imessageport), designed with flexibility to support various implementations, known as messaging protocols. Applications integrated with Msgport can quickly switch between different messaging protocols, leveraging the benefits of each, such as lower cross-chain message fees or enhanced security.
 
 Highlighting the three messaging protocols:
 
-  - [ORMP](./learn/messaging-protocols/ormp.md): Oracle Relayer Messaging Protocol leverages chain-independent components, such as oracles and DApp-preferred relayers, to verify cross-chain messages. This approach integrates diverse verification mechanisms, ensuring robust and flexible cross-chain communication.
-  - [LCMP](./learn/messaging-protocols/lcmp.md): Light Client Cross-Chain Messaging Protocol employs blockchain consensus mechanisms and light clients as decentralized verifiers. This ensures the integrity and accuracy of message verification across different blockchains, fostering a secure and trustless environment for message passing.
-  - [XCMP](./learn/messaging-protocols/xcmp.md): Developed by Polkadot, Cross-Consensus Message Passing facilitates seamless messaging between various parachains within the Polkadot network. Messages are exchanged directly by parachains, relayed and verified by the relay chain, exemplifying efficient inter-parachain communication and interoperability.
+  - [ORMP](./messaging-protocols/ormp.md): Oracle Relayer Messaging Protocol leverages chain-independent components, such as oracles and DApp-preferred relayers, to verify cross-chain messages. This approach integrates diverse verification mechanisms, ensuring robust and flexible cross-chain communication.
+  - [LCMP](./messaging-protocols/lcmp.md): Light Client Cross-Chain Messaging Protocol employs blockchain consensus mechanisms and light clients as decentralized verifiers. This ensures the integrity and accuracy of message verification across different blockchains, fostering a secure and trustless environment for message passing.
+  - [XCMP](./messaging-protocols/xcmp.md): Developed by Polkadot, Cross-Consensus Message Passing facilitates seamless messaging between various parachains within the Polkadot network. Messages are exchanged directly by parachains, relayed and verified by the relay chain, exemplifying efficient inter-parachain communication and interoperability.
 
 These implementations underscore Msgport's commitment to fostering interoperability, ensuring that assets and information can navigate the complex landscape of blockchain technology smoothly.
