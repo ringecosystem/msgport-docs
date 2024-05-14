@@ -57,6 +57,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/msgport
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/msgport
   extra:
   analytics:
     provider: google
