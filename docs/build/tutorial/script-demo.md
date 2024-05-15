@@ -1,4 +1,4 @@
-# Hello Message Using Script
+# Sending Messages Using Script
 
 Hello, and welcome! Grasping the intricacies of cross-chain messaging protocols can be challenging. If you're someone who learns best through hands-on experience, you're in luck! We've created a runnable demo just for you, designed to simplify and demystify the process of cross-chain communication.
 
