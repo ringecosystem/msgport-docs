@@ -31,5 +31,5 @@ The response explained below:
 
 - `code`: Indicates the success of the query.
 - `fee`: Represents the estimated fee in the native token of the source chain, utilized when calling the send() method in the source application.
-- `params`: Denotes the specific parameters required by the messaging protocol, used in the send() method in the source application.
+- `params`: Denotes the specific parameters required by the messaging protocol, used as the last parameter in the [`send(uint256 toChainId, address toDapp, bytes calldata message, bytes calldata params)`](./interfaces.md#imessageport) method in the source application.
 - `gas`: Reflects the gas cost for the cross-chain message transition.
