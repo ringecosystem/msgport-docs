@@ -123,6 +123,10 @@ markdown_extensions:
 
 plugins:
   - search
+  - meta-descriptions:
+      enable_checks: true
+      max_length: 500
+      trim: true
   - git-authors
   - git-revision-date-localized:
       fallback_to_build_date: false

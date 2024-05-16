@@ -1,5 +1,7 @@
 # Glossary
 
+This page provides clear definitions for key terms and concepts central to the Msgport protocol. Designed for both developers and users, it simplifies the understanding of our infrastructure. From "Port" to "MsgHash," each term is explained to help you navigate the complexities of decentralized messaging. Updated regularly, this glossary reflects the evolving nature of our technology, ensuring you have the most current information at your fingertips.
+
 ## Port
 
 The "port" is a fundamental concept in the msgport protocol, designating the access point where users or applications directly interact by sending or receiving messages. It is a pivotal element of the protocol's infrastructure. Each port is represented by an independent smart contract with a predefined address and can be uniquely identified by a combination of the chain_id and the port address.
