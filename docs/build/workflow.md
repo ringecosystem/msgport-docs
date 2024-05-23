@@ -6,25 +6,25 @@ For dApp developers looking to incorporate these cross-chain messaging protocols
 
 The purpose of this page is to provide you with a clear understanding of how the Msgport and [ORMP](../learn/messaging-protocols/ormp.md) messaging protocols facilitate cross-chain interactions. By breaking down these protocols, we aim to demystify the process, making it more accessible for developers needing to integrate cross-chain functionality into their projects.
 
-## Verifying network support
+## Check Network Support
 
 Before diving into the integration of the Msgport protocol, the initial and critical step is to confirm whether the [Msgport supports the network](./networks.md) you intend to use. If the network is supported, the integration process simplifies significantly, and your focus shifts to learning how to utilize the Msgport contract's capabilities for sending and receiving cross-chain messages. Typically, getting accustomed to these functions could take as little as half a day.
 
 On the other hand, if the network is not currently supported, your first course of action should be to Msgport team to inquire about potential future support. Alternatively, if you prefer a more hands-on approach, you have the option to develop and deploy the necessary contracts yourself and register them with the PortRegister.
 
-## Messaging workflow
+## Messaging Workflow
 
 !!! note
     For those interested in gaining a more in-depth understanding of how Msgport operates, there is a [runnable demo available](https://github.com/msgport/msgport-demo) for reference. This can be a valuable resource to see the message port in action.
 
-### Find the Port Contract Address
+### Find The Port Contract Address
 
 After verifying that the Msgport aligns with your project's objectives, the subsequent step is to locate the port contract address. If you're unfamiliar with the concept of a port contract, you can learn more by visiting **[this link](../learn/glossary.md#port)**. There are two methods to acquire the appropriate port address:
 
 1. Check the [Supported Networks list](./networks.md) for the endpoint. The port addresses are standardized across all networks to enhance clarity and ease of use, and you can easily find this information there.
 2. Use the  `get(uint256 chainId, string calldata name)` function to consult the [PortRegistry](../learn/glossary.md#portregistry) contract. By supplying the chainId and the specific protocol name, you can retrieve the endpoint for the target network. The PortRegistry contract is a detailed ledger of all registered port contracts, providing a trustworthy reference point.
 
-### Build the receiver application in the target chain
+### Build Receiver In the Target Chain
 
 Integrating Msgport into the receiver application on the target chain is a straightforward process. Simply extend your contract to implement the [Application](./interfaces.md#application) interface, and then incorporate your business logic into the contract as usual. Below is a demo code snippet for your reference.
 
@@ -60,7 +60,7 @@ contract TestReceiver is Application {
 
 The **`TestReceiver`** contains a public **`num`** variable and provides an **`addReceiveNum`** function that can be used to increment this value. Next, we will outline the steps for activating this function through Msgport to increase the **`num`** value from a different blockchain.
 
-### Setting Up the Message Content
+### Setting Up The Message Content
 
 Prior to initiating a cross chain transaction, it's essential to determine the content of the message, which encompasses several key fields required for the message transmission process:
 
@@ -68,13 +68,13 @@ Prior to initiating a cross chain transaction, it's essential to determine the c
 - **`toDapp`**: This refers to the contract address of the user application that will receive the message on the destination chain, in this example, the `TestReceiver` address.
 - **`message`**: This is the ABI-encoded call data that contains the information or instructions for the receiving contract, in this example, `bytes memory message = abi.encodeCall(TestReceiver.addReceiveNum, 10);`
 
-### Estimate message fee in native token
+### Estimate Message Fee in Native Token
 
 Message fees play a critical role in the design of a cross-chain messaging protocol. They represent not just the cost of incorporating cross-chain functionality into your applications, but they also impact the user experience of your application. A thoughtfully constructed fee mechanism is crucial for success.
 
 The fee structure for Msgport is implemented through the [Msgport API](https://github.com/msgport/msgport-api). For detailed information on the fee design, please refer to the [Msgport API Document](./api.md). Additionally, you can explore the [Pangolin > Sepolia Message Demo](../build/tutorial/script-demo.md) to see how the fee mechanism is applied in practice.
 
-### Send message in source chain application
+### Send Message In Source Chain Application
 
 With the preliminary setup out of the way, you're all set to send your cross-chain message. The process is quite simple—refer to the demo code below for guidance.
 
@@ -107,7 +107,7 @@ The line **`IMessagePort(PORT).send{value: msg.value}(toChainId, toDapp, messag
 
 By invoking the **`send`** function within the TestSender demo with the parameters you've prepared, your message is transmitted to the specified **`toChainId`** and will be executed by the **`toDapp`** contract on the destination chain. And that's the entire process.
 
-### Monitor the message status
+### Monitor The Message Status
 
 The delivery and execution of your message on the target chain may take approximately 5 to 15 minutes. To monitor the status of your message, we offer a scanning tool [Messages Scan](https://scan.msgport.xyz/) that allows you to track the progress using your sent message's transaction hash or the message hash itself.
 

@@ -13,13 +13,13 @@ ORMP stands for Oracle Relayer Messaging Protocol. It is an omni-chain messaging
 
 These two roles play a vital role in the entire process of sending, verifying, and receiving messages.
 
-## Features
+## Highlight Features
 
 - The cross-chain application provides the option to choose a different Oracle and Relayer if the user does not trust the   ones provided by the official team.
 - Messages are stored in an incremental Merkle tree, and the target chain relies on the tree root to validate the legitimacy of the received message.
 - The protocol does not guarantee the ordering of messages. However, the application has the option to maintain a nonce or a unique identifier to ensure that messages are received in the correct order, if ordering is necessary. This allows for ordered delivery of messages, even if the protocol itself doesn't provide that guarantee.
 
-## Messaging Design
+## Message Flow Design
 
 ![msgport-ormp-1](../../images/msgport-ormp-1.png)
 
@@ -74,7 +74,7 @@ When the `relay` method of the target chain contract is invoked, it performs the
 
 If the validation is successful, the message is then sent to the corresponding user application. Unless an exception occurs, the user contract's method is invoked to complete the cross-chain task associated with the message. At this point, we can consider the cross-chain message to have reached its destination.
 
-##  Cross-chain Fee
+##  Cross-Chain Fee Calculation
 
 The fee for cross-chain messaging is paid in the native token of the source chain. The application can retrieve the cross-chain fee by calling the **`fee`** function in the **[IMessagePort](../../build/interfaces.md#imessageport)** interface.
 

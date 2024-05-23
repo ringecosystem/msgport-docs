@@ -1,9 +1,14 @@
+:root {
+    --msgport-bg-dark: rgb(0, 179, 61)
+}
+
+
 /* Set the color scheme */
 [data-md-color-scheme="default"] {
-    --md-primary-fg-color: rgb(0, 179, 61);
+    --md-primary-fg-color: var(--msgport-bg-dark);
 }
 [data-md-color-scheme="slate"] {
-    --md-primary-fg-color: rgb(0, 179, 61);
+    --md-primary-fg-color: var(--msgport-bg-dark);
 }
 
 /* Update the logo height */
@@ -12,4 +17,22 @@
     display: block;
     height: 1.8rem;  /* Increase logo height from default 1.2rem */
     width: auto;
+}
+
+.md-header__title {
+    font-family: Montserrat Thin;
+    font-size: 18;
+    font-weight: 400;
+}
+
+.md-nav__link--active > span {
+    font-weight: bold;
+}
+
+.md-typeset h1 {
+    color: var(--msgport-bg-dark);
+}
+
+.md-typeset h2, h3, h4 {
+    color:  rgb(245, 157, 33); 
 }

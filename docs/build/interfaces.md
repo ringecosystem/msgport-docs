@@ -8,7 +8,7 @@ This table summarizes the core interfaces that may be used in the application's 
 | **[Application](./interfaces.md#application)** | This is utilized in the receiving application on the destination chain to extract crucial information for validating messages before execution. |
 | **[IPortMetadata](./interfaces.md#imessageport)** | This is utilized in the source chain to retrieve the message port information, such as fee, metadata, before sending a message. |
 
-## Interfaces
+## Interfaces Introduction
 
 ### IMessagePort
 
