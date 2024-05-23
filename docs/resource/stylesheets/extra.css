@@ -2,7 +2,6 @@
     --msgport-bg-dark: rgb(0, 179, 61)
 }
 
-
 /* Set the color scheme */
 [data-md-color-scheme="default"] {
     --md-primary-fg-color: var(--msgport-bg-dark);
@@ -27,6 +26,7 @@
     font-size: 18;
     font-weight: 400;
 }
+
 .md-nav__link--active > span {
     font-weight: bold;
 }
