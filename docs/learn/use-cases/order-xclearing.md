@@ -17,6 +17,6 @@ Should a liquidity relayer fail to fulfill the order promptly, a "slasher" can s
 
 Msgport plays a pivotal role in Helix Bridge by enabling efficient batch clearing and communication for liquidity relayers, leading to significantly reduced cross-chain fees. It allows for the seamless execution of orders and the swift resolution of disputes through the intervention of "slashers" when orders are not fulfilled as expected. Beyond token swaps, the flexibility and efficiency of Msgport can be extended to a wide range of use cases in cross chain orders senarios.
 
-## Reference
+## Available References
 
 - https://docs.helixbridge.app/helixbridge/liquidity_node_v3

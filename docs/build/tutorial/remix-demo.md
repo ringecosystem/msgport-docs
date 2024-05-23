@@ -8,7 +8,7 @@ In this guide, we'll walk you through the process of **sending cross-chain messa
 
 Before we proceed, it's important to understand that in our cross-chain communication, the Pangolin network serves as the source chain while the Sepolia network acts as the destination chain. It's crucial to have this distinction in mind. According to the msgport design, the fee for sending a cross-chain message is paid using the source chain's native token, which in this case is the Pangolin testnet token. Therefore, you'll need to acquire some test tokens beforehand. To do so, please use [the provided faucet](https://docs.darwinia.network/evm/chains/pangolin/#faucet) and ensure you add the Pangolin network to your Ethereum wallet, such as MetaMask.
 
-### The TestReceiver Contract
+### Understand The TestReceiver Contract
 
 For ease of understanding, we'll be working with an existing contract on the Sepolia network named **`TestReceive`**. You can find the contract details at [Sepolia Etherscan](https://sepolia.etherscan.io/address/0xb115b479ef7cbaeae5a69aae93adb0287adaa32c#code). The contract has a straightforward design; it includes a variable named **`sum`** and offers a method to increment its value.
 

@@ -9,7 +9,7 @@ LCMP, short for Light Client Cross-Chain Messaging Protocol, is a protocol metic
 
 The LCMP protocol consists of two layers, as shown in the diagram above. The first layer, known as the truth layer, incorporates the light client functionality. This layer is responsible for ensuring the integrity and validity of the cross-chain messages. The protocol derives its name from this layer, which plays a crucial role in maintaining the trustworthiness of the communication. The second layer of the LCMP protocol is the message layer. This layer is specifically designed to handle various aspects related to cross-chain messages. It takes care of issues such as message formatting, transaction fees, and other relevant considerations. By addressing these concerns, the message layer streamlines the process of sending and receiving cross-chain messages, enhancing the overall efficiency and effectiveness of the protocol.
 
-## Message Flow
+## Message Flow Design
 
 To facilitate a comprehensive understanding of the message flow, it is important to establish the assumption that the truth layer is functioning as intended. Without a properly functioning truth layer, it becomes impractical to delve into the intricacies of the message layer. This is because the truth layer plays a critical role in providing essential validation services for the message layer. If the truth layer is compromised or broken, it renders the execution of cross-chain messages on the target chain impossible, even if the messages successfully reach their intended destination.
 
@@ -31,7 +31,7 @@ Let's break down and expand upon the steps depicted in the diagram:
 - `MessageDispathed` - *Message has been executed in the target chain.*
 - `MessageDelivered` - *Messages in the inclusive range have been delivered to the bridged chain.*
 
-## Message Fee
+## Message Fee Design
 
 When discussing cross-chain message protocols, an important aspect to consider is the fee associated with these transactions. The fee calculation process is complex, involving various factors such as the tokens used in the source and target chains, the involvement of third-party entities like relayers, and the mechanism for incentivizing and collecting fees. 
 
@@ -105,7 +105,7 @@ message fee -                                                                   
                                 ---> slot duty rewards -> assigned duty relayers
 ```
 
-### An example
+### Example
 
 1. Assume that relayers `R1`, `R2`, `R3`, `R4` and `R5` have registered with the fee market and are all running relayer clients capable of delivering messages with quote prices of `P1=10`, `P2=20`, `P3=30`, `P4=40` and `P5=50` and are registered with a locked asset of `300`.
 2. Assume that the total number of assigned relayers specified by the fee market system is `3` (default). In this case, the fee market will generate a cross-chain fee of `30` (10 < 20 < 30 < 40 < 50) and the set of assigned relayers is `R1, R2, R3`.
@@ -175,7 +175,7 @@ The slash, reward analysis is divided into two cases.
         - To message delivery relayer: `(30 + 40 * 3) * MessageRelayersRewardRatio = 120`
         - To message confirm relayer: `(30 + 40 * 3) * MessageRelayersRewardRatio = 30`
 
-## Implementations
+## Existed Implementations
 
 Here are the two implementations of the LCMP that we discussed:
 
