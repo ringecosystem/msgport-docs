@@ -9,7 +9,7 @@ theme:
   logo: resource/pics/msgport-logo.svg
   favicon: resource/pics/favicon.png
   font:
-    text: Iter
+    text: San Francisco
     code: SFMono-Regular
   features:
     - announce.dismiss
