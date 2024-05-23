@@ -4,7 +4,7 @@ RingDAO is a upcoming DAO based using [Tally](https://www.tally.xyz/) on Darwini
 
 ## Cross-chain governance
 
-[XAcount](https://xaccount.box/) will be adopted by RingDAO for cross-chain govenance, it is also seamlessly integrated with the Safe Modules, with which we can customized a recovery address to challenge and gain the xAccount permission if it lost connection from original chain.
+[XAcount](https://xaccount.box/) will be adopted by RingDAO for cross-chain govenance, it is also seamlessly integrated with the Safe Modules, with which we can customized a recovery address to challenge and gain the XAccount permission if it lost connection from original chain.
 
 ## Other projects governed by RingDAO
 
