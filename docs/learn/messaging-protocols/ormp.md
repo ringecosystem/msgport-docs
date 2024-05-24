@@ -74,7 +74,7 @@ When the `relay` method of the target chain contract is invoked, it performs the
 
 If the validation is successful, the message is then sent to the corresponding user application. Unless an exception occurs, the user contract's method is invoked to complete the cross-chain task associated with the message. At this point, we can consider the cross-chain message to have reached its destination.
 
-##  Cross-Chain Fee Calculation
+##  Cross-chain Fee Calculation
 
 The fee for cross-chain messaging is paid in the native token of the source chain. The application can retrieve the cross-chain fee by calling the **`fee`** function in the **[IMessagePort](../../build/interfaces.md#imessageport)** interface.
 

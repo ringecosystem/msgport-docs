@@ -2,13 +2,13 @@
 
 The [Msgport Protocol](./../index.md) is a robust and reliable cross-chain messaging protocol that has been deployed on many mainstream Ethereum blockchains, This protocol has undergone careful revisions to enhance its developer and user-friendliness.
 
-## Canonical Cross-Chain Contract
+## Canonical Cross-chain Contract
 
 The Msgport protocol is a set of contracts that defines the [core interfaces](./interfaces.md) for sending and receiving cross-chain messages. You can think of it as an abstract class in programming, with `Msgport` as its name.
 This abstract class can have multiple subclasses, known as messaging protocols, which extend its functionality. Each of these subclasses must adhere to the interfaces defined in the Msgport protocol. To be user-friendly, each messaging protocol has 
 its unique contract address across all the networks it supports. The table below shows the canonical cross-chain contract address for each supported network.
 
-|   Name     |  Canonical Cross-Chain Contract Address  |
+|   Name     |  Canonical Cross-chain Contract Address  |
 |------------|--------------------------------------------|
 |   [ORMP](../learn/messaging-protocols/ormp.md)     | 0x0000000005d961F950adA391C1511c92bbc64D9F |
 

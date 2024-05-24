@@ -1,4 +1,4 @@
-# Cross-Chain Tokens Management
+# Cross-chain Tokens Management
 
 Msgport's cross-chain functionality opens up a multitude of token management possibilities for applications. It allows issuers on either the source or target chains to set up and establish cross-chain bridge mappings for their tokens. Moreover, it acts as a utility for custodian issuers to launch Custodian DApps, which permit users to transfer the supported mapped tokens across different chains.
 
