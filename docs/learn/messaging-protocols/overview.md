@@ -14,4 +14,4 @@ The cross-chain mcessage protocol serves as the underlying technology for cross-
 | :--------: | :----------- |
 | [ORMP](./ormp.md) | Oracle Relayer Messaging Protocol, based on the Oracle mechanism, as darwinia msgport's default messaging protocol. |
 | [XCMP](./xcmp.md) | XCMP, which is based on Polkadot XCM, is on our roadmap for support. |
-| [LCMP](./lcmp.md) | Light Client Cross-Chain Messaging Protocol, used for years in Darwinia, currently replaced by ORMP. |
+| [LCMP](./lcmp.md) | Light Client Cross-chain Messaging Protocol, used for years in Darwinia, currently replaced by ORMP. |
