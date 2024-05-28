@@ -58,6 +58,8 @@ extra:
       link: https://github.com/msgport
     - icon: fontawesome/brands/telegram
       link: https://t.me/msgport
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/msgport_xyz
   extra:
   analytics:
     provider: google
