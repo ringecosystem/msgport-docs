@@ -4,19 +4,19 @@ ORMP stands for Oracle Relayer Messaging Protocol. It is an omni-chain messaging
 
 - The Oracle
     
-    In this context refers to any source of credible off-chain data. In ORMP, this data refers specifically to the root of an incremental merkle tree composed of cross-chain messages. We refer to this as the `message root` or `msgroot` for short. The message root is used to verify the authenticity of the cross-chain messages. The Oracle can either be a traditional off-chain data service, or a data feed based on the light client. Both of these methods can be used to provide the message root of another chain.
+    In this context refers to any source of credible off-chain data. In ORMP, this data refers specifically to the hash of cross-chain messages. We refer to this as the `message hash` or `msg_hash` for short. The message hash is used to verify the authenticity of the cross-chain messages. The Oracle can either be a traditional off-chain data service, or a data feed based on the light client. Both of these methods can be used to provide the message hash of another chain.
     
 - The Relayer
     
-    It’s an off-chain piece of software that's responsible for taking messages from one blockchain and relaying them to another. It queries the source chain to find messages that have not yet been relayed, and then relays the message and its proof to the target chain. Once the target chain receives the message, along with the msg_root provided by the Oracle, the target channel can verify the authenticity of the message and process it further if it is found to be valid.
+    It’s an off-chain piece of software that's responsible for taking messages from one blockchain and relaying them to another. It queries the source chain to find messages that have not yet been relayed, and then relays the message and its proof to the target chain. Once the target chain receives the message, along with the msg_hash provided by the Oracle, the target channel can verify the authenticity of the message and process it further if it is found to be valid.
     
 
 These two roles play a vital role in the entire process of sending, verifying, and receiving messages.
 
 ## Highlight Features
 
-- The cross-chain application provides the option to choose a different Oracle and Relayer if the user does not trust the   ones provided by the official team.
-- Messages are stored in an incremental Merkle tree, and the target chain relies on the tree root to validate the legitimacy of the received message.
+- The cross-chain application provides the option to choose a different Oracle and Relayer if the user does not trust the ones provided by the official team.
+- Messages are emitted from transaction receipt log, and the target chain relies on the msg_hash to validate the legitimacy of the received message.
 - The protocol does not guarantee the ordering of messages. However, the application has the option to maintain a nonce or a unique identifier to ensure that messages are received in the correct order, if ordering is necessary. This allows for ordered delivery of messages, even if the protocol itself doesn't provide that guarantee.
 
 ## Message Flow Design
@@ -40,17 +40,13 @@ struct Message {
 }
 ```
 
-Please be aware that within the channel, all messages are organized in an incremental Merkle tree. The channel is also tasked with receiving and distributing messages, as well as overseeing the management of the message root and its status.
-
-!!! note
-    An [incremental Merkle Tree](https://arxiv.org/abs/2105.06009) is a [Merkle Tree](https://en.wikipedia.org/wiki/Merkle_tree) of fixed depth where each leaf start as a zero value, and non-zero values are added by replacing the zero leaves starting from the left-most leaf to the right-most leaf one-by-one.
-    **The Incremental Merkle Tree is a gas efficient Merkle Tree.**
+Please be aware that within the channel, all messages are emitted from transaction receipt log. The channel is also tasked with receiving and distributing messages, as well as overseeing the management of the message hash and its status.
 
 ### Message Sending Flow
 
 1. The cross-chain application, built on the msgport interface **[IMessagePort](../../build/interfaces.md#imessageport)**, invokes the **`send(from, toChainId, to, gasLimit, encoded_call)`** method of the ORMP. This method is a payable method, meaning it requires the payment of a specific fee to execute. The fee structure is further explained below.
-2. Upon receiving the message, the ORMP contracts store it in an Incremental Merkle Tree, emit the `MessageAccepted` event and return msgHash to the sender as the an identifier for that message. 
-3. The ORMP contracts then invoke the specified relayer and oracle that have been previously registered with the protocol, emitting the `OracleAssigned` and `RelayerAssigned` event to signal the start of their respective tasks.
+2. Upon receiving the message, the ORMP contracts emit the `MessageAccepted` event and return msgHash to the sender as the an identifier for that message. 
+3. The ORMP contracts then invoke the specified relayer and oracle that have been previously registered with the protocol, emitting the `MessageAssigned` to signal the start of their respective tasks.
 
 Once these two steps are completed, the message sending process is considered finished.
 
@@ -58,17 +54,17 @@ Once these two steps are completed, the message sending process is considered fi
 
 The message relaying consists of two crucial roles: the relayer and the oracle service. These components continuously monitor the on-chain ORMP events to determine if there are new tasks assigned to them.
 
-- When the relayer detects a new event, it retrieves the corresponding MessageAccepted event and extracts detailed information about the message from the ORMP contract. It then constructs a message proof using the incremental tree in the corresponding channel of the ORMP. The relayer invokes the `relay(Message calldata message, bytes calldata proof)` method on the relayer contract on the target chain, completing the relay of the message and its proof.
-- When the oracle detects a new event, the oracle nodes fetch the corresponding `msg_root` which contains the message. They sign the `msg_root` and send it to a specific multisig contract, which collects all the oracle node signatures. Once the multisig contract gathers enough signatures (typically 3/5), the oracle network triggers the setting of the `msg_root` to the oracle component in the ORMP contracts, completing the relay of the `msg_root`.
+- When the relayer detects a new event, it retrieves the corresponding MessageAccepted event and extracts detailed information about the message from the ORMP contract. It then constructs a message in the corresponding channel of the ORMP. The relayer invokes the `relay(Message calldata message, bytes calldata proof)` method on the relayer contract on the target chain, completing the relay of the message and its proof.
+- When the oracle detects a new event, the oracle nodes fetch the corresponding `msg_hash` which contains the message. They sign the `msg_hash` and send it to a specific multisig contract, which collects all the oracle node signatures. Once the multisig contract gathers enough signatures (typically 3/5), the oracle network triggers the setting of the `msg_hash` to the oracle component in the ORMP contracts, completing the relay of the `msg_hash`.
 
-For the message to be executed in the ORMP target chain contracts, it requires both the message payload, proof, and a valid oracle `msg_root`.
+For the message to be executed in the ORMP target chain contracts, it requires both the message payload, proof, and a valid oracle `msg_hash`.
 
 ### Message Receiving Flow
 
 When the `relay` method of the target chain contract is invoked, it performs the following validations:
 
 - Verifies that the sender (relayer) is registered.
-- Ensures the proof corresponds with the `msg_root`.
+- Ensures the message corresponds with the `msg_hash`.
 - Confirms that the message's `to` field matches the destination `chainId`.
 - Checks whether the message has already been dispatched.
 
