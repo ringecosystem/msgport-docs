@@ -20,19 +20,19 @@ its unique contract address across all the networks it supports. The table below
 
 The ORMP messaging protocol is available on the following main/test networks, which means you can integrate cross-chain capabilities into your application without needing to deploy the underlying messaging protocol yourself. If your desired network is not listed, please feel free to reach out to our team for support and we will be happy to assist you.
 
-**NOTE**: All the chains listed above are connected, except for the Tron network, which is only connected to Darwinia network.
-
 ### For Mainnet
 
-- Arbitrum
-- Blast
-- Crab
-- Darwinia
-- Ethereum
-- Polygon
-- Moonbeam
+- Darwinia <> Crab
+- Darwinia <> Arbitrum
+- Darwinia <> Ethereum
+- Darwinia <> Polygon
+- Darwinia <> Moonbeam
+- Darwinia <> Tron
+- Arbitrum <> Blast
+- Ethereum <> Arbitrum
 
 #### Tron
+
 ```
 SUBAPIMultiSig: TMP3K1GjRgsXAUHX1jkBaBwaordRi9gHRH
 ORMP: TBuAR5bP2KoJ6Thx4zFqGChSARNRYrknTD
@@ -43,13 +43,16 @@ ORMPUpgradeablePort: TVT1osWgsPvdwxN9rPm7rRo78naN3fA23x
 
 ### For Testnet
 
-- Arbitrum Sepolia
-- Sepolia
-- Darwinia Pangolin
-- Tanssi Pangoro
-- Taiko Hekla
+- Darwinia Pangolin <> Arbitrum Sepolia
+- Darwinia Pangolin <> Tron Shasta
+- Darwinia Pangolin <> Sepolia
+- Sepolia <> Arbitrum Sepolia
+- Sepolia <> Tron Shasta
+- Sepolia <> Tanssi Pangoro
+- Arbitrum Sepolia <> Taiko Hekla
 
 #### Tron Shasta
+
 ```
 SUBAPIMultiSig: TEYbMKVNpumbN5myf5uN6VgFStckj9DGe5
 ORMP: TN1j3Ttt1c1mB3X2zdKkdMsUK6pZyLCxSr
