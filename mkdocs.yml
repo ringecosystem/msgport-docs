@@ -192,4 +192,6 @@ nav:
         - Sending Messages:        
           - Using Remix: "build/tutorial/remix-demo.md"
           - Using Script: "build/tutorial/script-demo.md"
-  - Community: "community/ringdao.md"
+  - Community: 
+      - Ring DAO: "community/ringdao.md"
+      - Bug Bounty: "community/bug-bounty.md"
