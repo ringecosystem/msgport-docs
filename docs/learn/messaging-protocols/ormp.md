@@ -4,7 +4,7 @@ ORMP stands for Oracle Relayer Messaging Protocol. It is an omni-chain messaging
 
 - The Oracle
     
-    In this context refers to any source of credible off-chain data. In ORMP, this data refers specifically to the hash of cross-chain message or the root of an incremental merkle tree composed of cross-chain messages. We refer to this as the `message hash` or `message root`. The message hash or root is used to verify the authenticity of the cross-chain messages. The Oracle can either be a traditional off-chain data service, or a data feed based on the light client. Both of these methods can be used to provide the message root of another chain.
+    In this context refers to any source of credible off-chain data. In ORMP, this data refers specifically to the hash of cross-chain message, we refer to this as the `message hash`. The message hash is used to verify the authenticity of the cross-chain messages. The Oracle can either be a traditional off-chain data service, or a data feed based on the light client. Both of these methods can be used to provide the message root of another chain.
     
 - The Relayer
     
@@ -16,7 +16,6 @@ These two roles play a vital role in the entire process of sending, verifying, a
 ## Highlight Features
 
 - The cross-chain application provides the option to choose a different Oracle and Relayer if the user does not trust the ones provided by the official team.
-- Messages are emitted from transaction receipt log, and the target chain relies on the tree root to validate the legitimacy of the received message.
 - The protocol does not guarantee the ordering of messages. However, the application has the option to maintain a nonce or a unique identifier to ensure that messages are received in the correct order, if ordering is necessary. This allows for ordered delivery of messages, even if the protocol itself doesn't provide that guarantee.
 
 ## Message Flow Design
@@ -40,7 +39,7 @@ struct Message {
 }
 ```
 
-Please be aware that within the channel, all messages are emitted from transaction receipt log. The channel is also tasked with receiving and distributing messages, as well as overseeing the management of the message hash and its status.
+Please be aware that the channel is tasked to store, receive and distribute messages, as well as overseeing the management of the message hash and its status.
 
 ### Message Sending Flow
 
@@ -54,17 +53,16 @@ Once these two steps are completed, the message sending process is considered fi
 
 The message relaying consists of two crucial roles: the relayer and the oracle service. These components continuously monitor the on-chain ORMP events to determine if there are new tasks assigned to them.
 
-- When the relayer detects a new event, it retrieves the corresponding MessageAccepted event and extracts detailed information about the message from the ORMP contract. It then constructs a message proof using the incremental tree in the corresponding channel of the ORMP. The relayer invokes the `relay(Message calldata message, bytes calldata proof)` method on the relayer contract on the target chain, completing the relay of the message and its proof.
-- When the oracle detects a new event, the oracle nodes fetch the corresponding `msg_hash` or `msg_root` which contains the message. They sign the `msg_hash` or `msg_root` and send it to a specific multisig contract, which collects all the oracle node signatures. Once the multisig contract gathers enough signatures (typically 3/5), the oracle network triggers the setting of the `msg_hash` or `msg_root` to the oracle component in the ORMP contracts, completing the relay of the `msg_hash` or `msg_root`.
+- When the relayer detects a new event, it retrieves the corresponding `MessageAccepted` event and extracts detailed information about the message from the ORMP contract. It then invokes the `relay(Message calldata message)` method on the relayer contract on the target chain, completing the relay of the message and its proof.
+- When the oracle detects a new event, the oracle nodes fetch the corresponding `msg_hash` of the message. They sign the `msg_hash` and send it to a specific multisig contract, which collects all the oracle node signatures. Once the multisig contract gathers enough signatures (typically 3/5), the oracle network triggers the setting of the `msg_hash` to the oracle component in the ORMP contracts, completing the relay of the `msg_hash`.
 
-For the message to be executed in the ORMP target chain contracts, it requires both the message payload, proof, and a valid oracle `msg_hash` or `msg_root`.
+For the message to be executed in the ORMP target chain contracts, it requires both the message payload, proof, and a valid oracle `msg_hash`.
 
 ### Message Receiving Flow
 
 When the `relay` method of the target chain contract is invoked, it performs the following validations:
 
 - Verifies that the sender (relayer) is registered.
-- Ensures the proof corresponds with the `msg_hash` or `msg_root`.
 - Confirms that the message's `to` field matches the destination `chainId`.
 - Checks whether the message has already been dispatched.
 
