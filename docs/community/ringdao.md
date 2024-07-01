@@ -1,6 +1,6 @@
 # Overview
 
-RingDAO is a upcoming DAO based using [Tally](https://www.tally.xyz/) on Darwinia Chain, intended for governing the Darwinia Chain in its next version. It is currently under development and implementation. [**RING**](https://coinmarketcap.com/currencies/darwinia-network/) will be the govenance token of RingDAO. 
+[RingDAO](https://ringdao.com/) is a upcoming DAO based using [Tally](https://www.tally.xyz/) on Darwinia Chain, intended for governing the Darwinia Chain in its next version. It is currently under development and implementation. [**RING**](https://coinmarketcap.com/currencies/darwinia-network/) will be the govenance token of RingDAO. 
 
 ## Cross-chain Governance
 
