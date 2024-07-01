@@ -165,6 +165,7 @@ plugins:
         "build/use-cases/xtoken.md": "learn/use-cases/xtoken.md"
         "build/use-cases/xaccount.md": "learn/use-cases/xaccount.md"
         "build/use-cases/xdao.md": "learn/use-cases/xdao.md"
+        "build/tutorial/script-demo.md": "build/tutorial/examples.md"
 nav:
   - Learn:
       - What is Msgport?: "index.md"
@@ -191,7 +192,7 @@ nav:
       - Tutorial:
         - Sending Messages:        
           - Using Remix: "build/tutorial/remix-demo.md"
-          - Using Script: "build/tutorial/script-demo.md"
+        - Explore More Examples: "build/tutorial/examples.md"
   - Community: 
       - Ring DAO: "community/ringdao.md"
       - Bug Bounty: "community/bug-bounty.md"
