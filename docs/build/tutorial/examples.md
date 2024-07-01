@@ -5,5 +5,3 @@ Greetings and welcome! Understanding the complexities of cross-chain messaging p
 These examples offer a tangible approach to witnessing cross-chain messaging firsthand. You can find these examples on our GitHub repository at [msgport-examples](https://github.com/msgport/msgport-examples). By following the instructions in the README, you'll be guided through the process of sending a cross-chain message from the Koi testnet to the Sepolia network. This personalized experience is designed to enhance your comprehension of how cross-chain messaging operates.
 
 Once you've had an opportunity to delve into the examples, we'd appreciate hearing your thoughts. Your input is crucial to us, so feel free to share your experiences and any observations you might have. May your exploration of the fascinating realm of cross-chain messaging be both enlightening and enjoyable.
-
-
