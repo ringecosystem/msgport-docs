@@ -1,7 +1,7 @@
 # API
 
 !!! note
-    If you're looking to explore the workings of the Msgport API more thoroughly, there is [a runnable demo](https://github.com/msgport/msgport-demo) at your disposal. This practical example serves as an excellent resource to witness the Msgport API's functionality in real-time.
+    If you're looking to explore the workings of the Msgport API more thoroughly, there are [Runnable examples](https://github.com/msgport/msgport-examples) at your disposal. These practical examples serves as an excellent resource to witness the Msgport API's functionality in real-time.
 
 The [Msgport API](https://github.com/msgport/msgport-api) serves as a specialized tool to assist Msgport Apps in acquiring additional information necessary for the message delivery process. **Its primary role is to provide an estimation of the cross-chain fee in the native token of the source chain.** This fee covers the various cross-chain expenses that Dapps are responsible for, encapsulating the costs associated with handling token value differences between chains and the delivery and execution fees incurred on both the source and destination chains. By offering the fee estimation in the source chain's native currency, the Msgport API simplifies these complexities, resulting in a seamless user experience. Users benefit from this approach as it eliminates the need for them to possess any tokens from the target chain to facilitate cross-chain transactions.
 

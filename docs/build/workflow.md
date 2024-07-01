@@ -15,7 +15,7 @@ On the other hand, if the network is not currently supported, your first course 
 ## Messaging Workflow
 
 !!! note
-    For those interested in gaining a more in-depth understanding of how Msgport operates, there is a [runnable demo available](https://github.com/msgport/msgport-demo) for reference. This can be a valuable resource to see the message port in action.
+    For those interested in gaining a more in-depth understanding of how Msgport operates, there are some [runnable examples available](https://github.com/msgport/msgport-examples) for reference. This can be a valuable resource to see the message port in action.
 
 ### Find The Port Contract Address
 
@@ -72,7 +72,7 @@ Prior to initiating a cross chain transaction, it's essential to determine the c
 
 Message fees play a critical role in the design of a cross-chain messaging protocol. They represent not just the cost of incorporating cross-chain functionality into your applications, but they also impact the user experience of your application. A thoughtfully constructed fee mechanism is crucial for success.
 
-The fee structure for Msgport is implemented through the [Msgport API](https://github.com/msgport/msgport-api). For detailed information on the fee design, please refer to the [Msgport API Document](./api.md). Additionally, you can explore the [Pangolin > Sepolia Message Demo](../build/tutorial/script-demo.md) to see how the fee mechanism is applied in practice.
+The fee structure for Msgport is implemented through the [Msgport API](https://github.com/msgport/msgport-api). For detailed information on the fee design, please refer to the [Msgport API Document](./api.md). Additionally, you can explore the [Msgport examples](https://github.com/msgport/msgport-examples) to see how the fee mechanism is applied in practice.
 
 ### Send Message In Source Chain Application
 
