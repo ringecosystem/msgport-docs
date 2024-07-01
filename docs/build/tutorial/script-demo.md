@@ -1,7 +1,9 @@
-# Sending Messages Using Script
+# Explore More Examples
 
-Hello, and welcome! Grasping the intricacies of cross-chain messaging protocols can be challenging. If you're someone who learns best through hands-on experience, you're in luck! We've created a runnable demo just for you, designed to simplify and demystify the process of cross-chain communication.
+Greetings and welcome! Understanding the complexities of cross-chain messaging protocols can indeed be daunting. However, if you prefer learning by doing, we've got something special for you We've crafted examples aimed at simplifying and clarifying the process of cross-chain communication.
 
-This demo provides a practical way to see cross-chain messaging in action. You can access the demo at [msgport-demo](https://github.com/msgport/msgport-demo). Follow the README to walk through sending a cross-chain message from the Pangolin testnet to the Sepolia network. It's a tailored experience to help you gain a deeper understanding of how cross-chain messaging works.
+These examples offer a tangible approach to witnessing cross-chain messaging firsthand. You can find these examples on our GitHub repository at [msgport-examples](https://github.com/msgport/msgport-examples). By following the instructions in the README, you'll be guided through the process of sending a cross-chain message from the Koi testnet to the Sepolia network. This personalized experience is designed to enhance your comprehension of how cross-chain messaging operates.
 
-After you've had a chance to explore the demo, we would love to hear your thoughts. Your feedback is invaluable to us, so please don't hesitate to share your experience and any insights you may have. Enjoy your journey through the world of cross-chain messaging!
+Once you've had an opportunity to delve into the examples, we'd appreciate hearing your thoughts. Your input is crucial to us, so feel free to share your experiences and any observations you might have. May your exploration of the fascinating realm of cross-chain messaging be both enlightening and enjoyable.
+
+
