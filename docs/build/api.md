@@ -1,7 +1,7 @@
-# API
+# Msgport API
 
 !!! note
-    If you're looking to explore the workings of the Msgport API more thoroughly, there are [Runnable examples](https://github.com/msgport/msgport-examples) at your disposal. These practical examples serves as an excellent resource to witness the Msgport API's functionality in real-time.
+    If you're looking to explore the workings of the Msgport API more thoroughly, there are [Runnable Examples](https://github.com/msgport/msgport-examples) at your disposal. These practical examples serves as an excellent resource to witness the Msgport API's functionality in real-time.
 
 The [Msgport API](https://github.com/msgport/msgport-api) serves as a specialized tool to assist Msgport Apps in acquiring additional information necessary for the message delivery process. **Its primary role is to provide an estimation of the cross-chain fee in the native token of the source chain.** This fee covers the various cross-chain expenses that Dapps are responsible for, encapsulating the costs associated with handling token value differences between chains and the delivery and execution fees incurred on both the source and destination chains. By offering the fee estimation in the source chain's native currency, the Msgport API simplifies these complexities, resulting in a seamless user experience. Users benefit from this approach as it eliminates the need for them to possess any tokens from the target chain to facilitate cross-chain transactions.
 
@@ -9,19 +9,23 @@ Beyond providing fee information, the API also delivers associated parameter dat
 
 ## Request and Response Example
 
+Click on the [Msgport API](https://apidog.msgport.xyz/) and give it a try.
+
+For request:
+
 ![msgport api request](../images/msgport-api-request.png)
 
 The request explained below:
 
-* API default url: `https://api.msgport.xyz/ormp/fee`
-* Request method: `GET`
+* API default url: `https://api.msgport.xyz/v2/fee_with_options`
+* Request method: `Post`
 * Params:
-    * `from_chain_id`: The source chain ID.
-    * `to_chain_id`: The destination chain ID.
-    * `from_address`: The application address in the source chain.
-    * `to_address`: The application address in the destination chain.
-    * `payload`:  The eth-abi-encoded function call, which represents the cross-chain message.
-    * `refund_address`: The account that receive the potential cross-chain fee refund.
+    * `fromChainId`: The source chain ID.
+    * `toChainId`: The destination chain ID.
+    * `fromAddress`: The application address in the source chain.
+    * `toAddress`: The application address in the destination chain.
+    * `message`:  The eth-abi-encoded function call, which represents the cross-chain message.
+    * `refundAddress`: The account that receive the potential cross-chain fee refund.
 
 For response:
 
