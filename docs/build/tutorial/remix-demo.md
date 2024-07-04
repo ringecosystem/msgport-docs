@@ -6,7 +6,7 @@ In this guide, we'll walk you through the process of **sending cross-chain messa
 
 ### Get Koi Test Token
 
-Before we proceed, it's important to understand that in our cross-chain communication, the Koi network serves as the source chain while the Sepolia network acts as the destination chain. It's crucial to have this distinction in mind. According to the msgport design, the fee for sending a cross-chain message is paid using the source chain's native token, which in this case is the Koi testnet token. Therefore, you'll need to acquire some test tokens beforehand. To do so, please use [the provided faucet](https://docs.darwinia.network/evm/chains/pangolin/#faucet) and ensure you add the Koi network to your Ethereum wallet, such as MetaMask.
+Before we proceed, it's important to understand that in our cross-chain communication, the Koi network serves as the source chain while the Sepolia network acts as the destination chain. It's crucial to have this distinction in mind. According to the msgport design, the fee for sending a cross-chain message is paid using the source chain's native token, which in this case is the Koi testnet token. Therefore, you'll need to acquire some test tokens beforehand. To do so, please use [the provided faucet](https://faucet.triangleplatform.com/darwinia/koi) and ensure you add the Koi network to your Ethereum wallet, such as MetaMask.
 
 ### Understand The Counter Contract
 
@@ -111,9 +111,8 @@ After setting up the required parameters, proceed to click the transact button t
 
 ## Check Message Status
 
-A [msgport scan](../scan.md) available to monitor the status of cross-chain messages, offering the ability to index messages by either the transaction hash or the msghash. Typically, querying with the transaction hash is the most convenient approach.
+A [msgport scan](../scan.md) available to monitor the status of cross-chain messages, offering the ability to index messages by either the source chain transaction hash or the msgId. Typically, querying with the transaction hash is the most convenient approach.
 
 ## Check In The Counter
 
-
-When the message status indicator turns green and shows **success**, it signifies that the cross-chain message process has been completed. At this point, you can verify the **`TestReceive`** contract to confirm that the **`sum`** value has incremented, or you can examine the [contract's events](https://sepolia.etherscan.io/address/0xB5B87E611C742118B7e6d998458d08BB7EC54867#events) for confirmation.
+When the message status indicator turns green and shows **success**, it signifies that the cross-chain message process has been completed. At this point, you can verify the **`Counter`** contract to confirm that the **`number`** value has incremented, or you can examine the [contract's events](https://sepolia.etherscan.io/address/0xB5B87E611C742118B7e6d998458d08BB7EC54867#events) for confirmation.
