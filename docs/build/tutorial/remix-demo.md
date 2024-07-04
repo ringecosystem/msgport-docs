@@ -6,7 +6,7 @@ In this guide, we'll walk you through the process of **sending cross-chain messa
 
 ### Get Koi Test Token
 
-Before we proceed, it's important to understand that in our cross-chain communication, the Koi network serves as the source chain while the Sepolia network acts as the destination chain. It's crucial to have this distinction in mind. According to the msgport design, the fee for sending a cross-chain message is paid using the source chain's native token, which in this case is the Koi testnet token. Therefore, you'll need to acquire some test tokens beforehand. To do so, please use [the provided faucet](https://docs.darwinia.network/evm/chains/pangolin/#faucet) and ensure you add the Koi network to your Ethereum wallet, such as MetaMask.
+Before we proceed, it's important to understand that in our cross-chain communication, the Koi network serves as the source chain while the Sepolia network acts as the destination chain. It's crucial to have this distinction in mind. According to the msgport design, the fee for sending a cross-chain message is paid using the source chain's native token, which in this case is the Koi testnet token. Therefore, you'll need to acquire some test tokens beforehand. To do so, please use [the provided faucet](https://faucet.triangleplatform.com/darwinia/koi) and ensure you add the Koi network to your Ethereum wallet, such as MetaMask.
 
 ### Understand The Counter Contract
 
