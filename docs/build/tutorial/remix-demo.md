@@ -111,9 +111,8 @@ After setting up the required parameters, proceed to click the transact button t
 
 ## Check Message Status
 
-A [msgport scan](../scan.md) available to monitor the status of cross-chain messages, offering the ability to index messages by either the transaction hash or the msghash. Typically, querying with the transaction hash is the most convenient approach.
+A [msgport scan](../scan.md) available to monitor the status of cross-chain messages, offering the ability to index messages by either the source chain transaction hash or the msgId. Typically, querying with the transaction hash is the most convenient approach.
 
 ## Check In The Counter
 
-
-When the message status indicator turns green and shows **success**, it signifies that the cross-chain message process has been completed. At this point, you can verify the **`TestReceive`** contract to confirm that the **`sum`** value has incremented, or you can examine the [contract's events](https://sepolia.etherscan.io/address/0xB5B87E611C742118B7e6d998458d08BB7EC54867#events) for confirmation.
+When the message status indicator turns green and shows **success**, it signifies that the cross-chain message process has been completed. At this point, you can verify the **`Counter`** contract to confirm that the **`number`** value has incremented, or you can examine the [contract's events](https://sepolia.etherscan.io/address/0xB5B87E611C742118B7e6d998458d08BB7EC54867#events) for confirmation.
