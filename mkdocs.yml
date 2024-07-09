@@ -192,6 +192,7 @@ nav:
       - Tutorial:
         - Sending Messages:        
           - Using Remix: "build/tutorial/remix-demo.md"
+        - Validating Messages: "build/tutorial/validation.md"
         - Explore More Examples: "build/tutorial/examples.md"
   - Community: 
       - Ring DAO: "community/ringdao.md"
