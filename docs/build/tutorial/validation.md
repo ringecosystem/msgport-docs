@@ -1,13 +1,12 @@
 # Validating Received Messages
 
-For the application that receive the cross-chain messages, it's important to validate it before processing it, such as validate the message comes from the right source chain or validate the message comes from the right application in the source chain. Adding those validation for your application can avoid the contract state been 
-updated in unexpected ways.
+For the application that receives cross-chain messages, it is crucial to validate the received messages to ensure they come from the intended source chain and application. Adding these validations to your application can help prevent unexpected changes to the contract's state.
 
-The basic validation material is provided by the Msgport [Application](../interfaces.md#application) contract. It provide the following functions:
+The basic validation materials are provided by the Msgport [Application](../interfaces.md#application) contract. It provides the following functions:
 
-* `_msgPort()`: Return the `msg.sender` of the received message, normally it should be the address of the corresponding msgport.
-* ` _messageId()`: Return the message id of the received message.
-* `_chainId()`: Return the chain id of the source chain. It's recommended to validate it by default.
-* `_xmsgSender()`: Return the application address of the source chain, where the received message comes from. It's recommended to validate it by default.
+* `_msgPort()`: Returns the `msg.sender` of the received message, typically the address of the corresponding message port.
+* `_messageId()`: Returns the message ID of the received message.
+* `_chainId()`: Returns the chain ID of the source chain. It is recommended to validate it by default.
+* `_xmsgSender()`: Returns the application address in the source chain from which the received message originates. It is recommended to validate it by default.
 
-Since we recommend the application who receive the message should extend the `Application` contract, so that can validate message using these material directly. See the [examples](https://github.com/msgport/msgport-examples) if you want to know more.  
+Since it is recommended that the application receiving the message extends the `Application` contract, these validation materials can be used directly by the application. You can refer to the [examples](https://github.com/msgport/msgport-examples) for more information.
