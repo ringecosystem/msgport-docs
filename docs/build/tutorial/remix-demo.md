@@ -2,11 +2,17 @@
 
 In this guide, we'll walk you through the process of **sending cross-chain messages from the [Darwinia Koi testnet](https://docs.darwinia.network/build/getting-started/networks/koi/) to the Ethereum Sepolia testnet** using the msgport protocol with [Remix](https://remix.ethereum.org/). No extensive smart contract development expertise is necessary — as long as you're familiar with deploying and interacting with Solidity smart contracts in Remix, you'll be able to follow along. Let's dive in!
 
+## Overview
+
+This example is based on a basic [Counter](#understand-the-counter-contract) smart contract. The contract is simple and easy to understand. A contract with a `number` storage is deployed in the Sepolia testnet, and another contract named [CounterSender](#prepare-the-countersender-contract) is deployed in the Koi testnet. The goal is to call the `increaseNumber()` function of the Sepolia Counter from the Koi testnet CounterSender.
+
 ## Prerequisites
 
 ### Get Koi Test Token
 
-Before we proceed, it's important to understand that in our cross-chain communication, the Koi network serves as the source chain while the Sepolia network acts as the destination chain. It's crucial to have this distinction in mind. According to the msgport design, the fee for sending a cross-chain message is paid using the source chain's native token, which in this case is the Koi testnet token. Therefore, you'll need to acquire some test tokens beforehand. To do so, please use [the provided faucet](https://faucet.triangleplatform.com/darwinia/koi) and ensure you add the Koi network to your Ethereum wallet, such as MetaMask.
+Before we proceed, it's important to understand that in our cross-chain communication, the Koi network serves as the source chain while the Sepolia network acts as the destination chain. It's crucial to have this distinction in mind. 
+
+According to the msgport design, the fee for sending a cross-chain message is paid using the source chain's native token, which in this case is the Koi testnet token. Therefore, you'll need to acquire some test tokens beforehand. To do so, please use [the provided faucet](https://faucet.triangleplatform.com/darwinia/koi) and ensure you add the Koi network to your Ethereum wallet, such as MetaMask.
 
 ### Understand The Counter Contract
 
