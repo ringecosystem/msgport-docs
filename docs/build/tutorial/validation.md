@@ -4,7 +4,7 @@ For the application that receives cross-chain messages, it is crucial to validat
 
 The basic validation materials are provided by the Msgport [Application](../interfaces.md#application) contract. It provides the following functions:
 
-* `_msgPort()`: Returns the `msg.sender` of the received message, typically the address of the corresponding message port.
+* `_msgPort()`: Returns the `msg.sender` of the received message, typically the address of the corresponding port.
 * `_messageId()`: Returns the message ID of the received message.
 * `_chainId()`: Returns the chain ID of the source chain. It is recommended to validate it by default.
 * `_xmsgSender()`: Returns the application address in the source chain from which the received message originates. It is recommended to validate it by default.

@@ -186,7 +186,7 @@ nav:
   - Developers:
       - Supported Networks: "build/networks.md"
       - Core Interfaces: "build/interfaces.md"
-      - Message Workflow: "build/workflow.md"
+      - Integration Guide: "build/workflow.md"
       - Message Scan: "build/scan.md"
       - API Documentation: "build/api.md"
       - Tutorial:

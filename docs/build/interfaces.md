@@ -14,7 +14,7 @@ This table summarizes the core interfaces that may be used in the application's 
 
 The `IMessagePort` interface within the Msgport is crafted to simplify the complexities of underlying cross-chain messaging protocols for dApp developers. It offers a standardized interface to send cross-chain messages across various messaging protocols. The interface includes two critical functions:
 
-- **`send()`**: Serves as the gateway for users or applications to dispatch cross-chain messages.
+- **`send()`**: Serves as the gateway for users or applications to send a cross-chain message. It returns a msgId, which is the identifier of the message and can be used to track the message status.
 - **`fee()`**: Retrieves the necessary fee information for utilizing the **`send()`** function.
 
 The Msgport layer accommodates a variety of messaging protocols that adhere to this interface, including ORMP, ICMP, and XCMP, among others. The code for the interface furnishes detailed explanations of each function's use.
