@@ -4,11 +4,11 @@ ORMP stands for Oracle Relayer Messaging Protocol. It is an omni-chain messaging
 
 - The Oracle
     
-    In this context refers to any source of credible off-chain data. In ORMP, this data refers specifically to the hash of cross-chain message, we refer to this as the `message hash`. The message hash is used to verify the authenticity of the cross-chain messages. The Oracle can either be a traditional off-chain data service, or a data feed based on the light client. Both of these methods can be used to provide the message root of another chain.
+    In this context refers to any source of credible off-chain data. In ORMP, this data refers specifically to the hash of cross-chain message, we refer to this as the `msgHash`. The msgHash is used to verify the authenticity of the cross-chain messages. The Oracle can either be a traditional off-chain data service, or a data feed based on the light client. Both methods can be used to validate the message prior to execution.
     
 - The Relayer
     
-    It’s an off-chain piece of software that's responsible for taking messages from one blockchain and relaying them to another. It queries the source chain to find messages that have not yet been relayed, and then relays the message and its proof to the target chain. Once the target chain receives the message, along with the msg_root provided by the Oracle, the target channel can verify the authenticity of the message and process it further if it is found to be valid.
+    It’s an off-chain piece of software that's responsible for taking messages from one blockchain and relaying them to another. It queries the source chain to find messages that have not yet been relayed, and then relays the message and its proof to the target chain. Once the target chain receives the message, along with the proof provided by the Oracle, the target channel can verify the authenticity of the message and process it further if it is found to be valid.
     
 
 These two roles play a vital role in the entire process of sending, verifying, and receiving messages.
@@ -44,7 +44,7 @@ Please be aware that the channel is tasked to store, receive and distribute mess
 ### Message Sending Flow
 
 1. The cross-chain application, built on the msgport interface **[IMessagePort](../../build/interfaces.md#imessageport)**, invokes the **`send(from, toChainId, to, gasLimit, encoded_call)`** method of the ORMP. This method is a payable method, meaning it requires the payment of a specific fee to execute. The fee structure is further explained below.
-2. Upon receiving the message, the ORMP contracts emit the `MessageAccepted` event and return msgHash to the sender as the an identifier for that message. 
+2. Upon receiving the message, the ORMP contracts emit the `MessageAccepted` event and return msgId to the sender as the an identifier for that message. 
 3. The ORMP contracts then invoke the specified relayer and oracle that have been previously registered with the protocol, emitting the `MessageAssigned` to signal the start of their respective tasks.
 
 Once these two steps are completed, the message sending process is considered finished.
@@ -53,10 +53,10 @@ Once these two steps are completed, the message sending process is considered fi
 
 The message relaying consists of two crucial roles: the relayer and the oracle service. These components continuously monitor the on-chain ORMP events to determine if there are new tasks assigned to them.
 
-- When the relayer detects a new event, it retrieves the corresponding `MessageAccepted` event and extracts detailed information about the message from the ORMP contract. It then invokes the `relay(Message calldata message)` method on the relayer contract on the target chain, completing the relay of the message and its proof.
-- When the oracle detects a new event, the oracle nodes fetch the corresponding `msg_hash` of the message. They sign the `msg_hash` and send it to a specific multisig contract, which collects all the oracle node signatures. Once the multisig contract gathers enough signatures (typically 3/5), the oracle network triggers the setting of the `msg_hash` to the oracle component in the ORMP contracts, completing the relay of the `msg_hash`.
+- When the relayer detects a new event, it retrieves the corresponding `MessageAccepted` event and extracts detailed information about the message from the ORMP contract. It then invokes the `relay(Message calldata message)` method on the relayer contract on the target chain, completing the relay of the message payload.
+- When the oracle detects a new event, the oracle nodes fetch the corresponding `msgHash` of the message. They sign the `msgHash` and send it to a specific multisig contract, which collects all the oracle node signatures. Once the multisig contract gathers enough signatures (typically 3/5), the oracle network triggers the setting of the `msgHash` to the oracle component in the ORMP contracts, completing the relay of the `msgHash`.
 
-For the message to be executed in the ORMP target chain contracts, it requires both the message payload, proof, and a valid oracle `msg_hash`.
+For the message to be executed in the ORMP target chain contracts, it requires both the message payload and a valid oracle `msgHash`.
 
 ### Message Receiving Flow
 
@@ -76,8 +76,7 @@ $$
 Fee = OracleFee + RelayingFee
 $$
 
-
-The total cross-chain fee consists of two parts: the oracle fee and the relayer fee. The oracle fee covers the cost of the message root oracle service. The relayer fee includes both the fee for relaying the message and the fee for executing the message on the target chain. If the fee paid exceeds the actual required fee, the excess amount will be refunded to the application.
+The total cross-chain fee consists of two parts: the oracle fee and the relayer fee. The oracle fee covers the cost of the oracle service. The relayer fee includes both the fee for relaying the message and the fee for executing the message on the target chain. If the fee paid exceeds the actual required fee, the excess amount will be refunded to the application.
 
 ### OracleFee
 
