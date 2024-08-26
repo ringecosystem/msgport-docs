@@ -9,8 +9,8 @@ theme:
   logo: resource/pics/msgport-logo.svg
   favicon: resource/pics/favicon.png
   font:
-    text: San Francisco
-    code: SFMono-Regular
+    text: 0xProto Nerd Font
+    code: 0xProto Nerd Font
   features:
     - announce.dismiss
     - content.action.edit
