@@ -35,6 +35,7 @@
     color: var(--msgport-bg-dark);
 }
 
-.md-container > .md-main > .md-main__inner > .md-content > .md-content__inner > p { 
+/* Set the font size */
+.md-container > .md-main > .md-main__inner > .md-content > .md-content__inner { 
     font-size: 15px; 
 }
