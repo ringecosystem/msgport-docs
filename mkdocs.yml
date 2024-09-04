@@ -1,4 +1,5 @@
 site_name: Msgport Documentation
+site_url: https://msgport.ringdao.com/docs/
 site_description: "This is the official documentation for the Msgport, which is a programmable cross-chain messaging protocol. This site covers the design, usage and integration guide for Msgport."
 copyright: Copyright &copy; Msgport
 repo_name: msgport-docs
