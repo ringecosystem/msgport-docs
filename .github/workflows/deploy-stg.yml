@@ -29,7 +29,6 @@ jobs:
           path: .github
       - name: Deploy to Vercel
         uses: ./.github/actions/smart-vercel
-        id: smart-vercel
         with:
           vercel_token: ${{ secrets.VERCEL_TOKEN }}
           vercel_group: itering
@@ -38,6 +37,7 @@ jobs:
           dist_path: site
           alias_domain: "msgport-docs-stg"
           script_run: false
+          vercel_json_path: docs/vercel.json
           enable_cache: true
           enable_notify_slack: true
           slack_channel: darwinia-docs
