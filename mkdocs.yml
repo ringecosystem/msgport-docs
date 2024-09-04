@@ -5,7 +5,7 @@ copyright: Copyright &copy; Msgport
 repo_name: msgport-docs
 edit_uri: https://github.com/msgport/docs/edit/main/docs
 use_directory_urls: false
-#site_dir: site/docs
+site_dir: site/docs
 theme:
   name: material
   logo: resource/pics/msgport-logo.svg
