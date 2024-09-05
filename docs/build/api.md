@@ -1,7 +1,7 @@
 # Msgport API
 
 !!! note
-    If you want to delve deeper into the workings of the Msgport API, you can find [Msgport Examples](https://github.com/msgport/msgport-examples) available for your use. These practical examples serve as a great resource to observe the functionality of the Msgport API in real-time.
+    If you want to delve deeper into the workings of the Msgport API, you can find [Msgport Examples](https://github.com/ringecosystem/msgport-examples) available for your use. These practical examples serve as a great resource to observe the functionality of the Msgport API in real-time.
 
 The [Msgport API](https://apidog.msgport.xyz/) serves as a specialized tool to assist Msgport Apps in acquiring additional information necessary for the message delivery process. **Its primary role is to provide an estimation of the cross-chain fee in the native token of the source chain.** This fee covers the various cross-chain expenses that Dapps are responsible for, encapsulating the costs associated with handling token value differences between chains and the delivery and execution fees incurred on both the source and destination chains. By offering the fee estimation in the source chain's native currency, the Msgport API simplifies these complexities, resulting in a seamless user experience. Users benefit from this approach as it eliminates the need for them to possess any tokens from the target chain to facilitate cross-chain transactions.
 

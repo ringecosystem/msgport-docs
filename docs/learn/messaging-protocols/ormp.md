@@ -80,11 +80,11 @@ The total cross-chain fee consists of two parts: the oracle fee and the relayer 
 
 ### OracleFee
 
-The fee for an oracle on a specific chain is determined, see the [fee page](https://github.com/msgport/ORMP/blob/main/script/input/1/fee.c.json#L2).
+The fee for an oracle on a specific chain is determined, see the [fee page](https://github.com/ringecosystem/ORMP/blob/main/script/input/1/fee.c.json#L2).
 
 ### RelayerFee
 
-The relayer fee is composed of the execution fee and the payload fee, with various factors influencing the calculation as detailed on the [fee page](https://github.com/msgport/ORMP/blob/main/script/input/1/fee.c.json#L10).
+The relayer fee is composed of the execution fee and the payload fee, with various factors influencing the calculation as detailed on the [fee page](https://github.com/ringecosystem/ORMP/blob/main/script/input/1/fee.c.json#L10).
 
 $$
 ExecutionFee = dstGasPriceInWei * (baseGas+gasLimit) * dstPriceRatio

@@ -3,7 +3,7 @@ site_url: https://msgport.ringdao.com/docs/
 site_description: "This is the official documentation for the Msgport, which is a programmable cross-chain messaging protocol. This site covers the design, usage and integration guide for Msgport."
 copyright: Copyright &copy; Msgport
 repo_name: msgport-docs
-edit_uri: https://github.com/msgport/docs/edit/main/docs
+edit_uri: https://github.com/ringecosystem/msgport-docs/edit/main/docs
 use_directory_urls: false
 site_dir: site/docs
 theme:
@@ -51,13 +51,13 @@ theme:
 
 extra:
   generator: false
-  homepage: https://msgport.xyz
+  homepage: https://msgport.ringdao.com
   status:
     new: Recently added
     deprecated: Deprecated
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/msgport
+      link: https://github.com/ringecosystem/msgport
     - icon: fontawesome/brands/telegram
       link: https://t.me/msgport
     - icon: fontawesome/brands/x-twitter
@@ -79,7 +79,7 @@ extra:
           data: 0
           note: >- 
             Thanks for your feedback! Help us improve this page by
-            using our <a href="https://github.com/msgport/docs/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">feedback form</a>.
+            using our <a href="https://github.com/ringecosystem/msgport-docs/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">feedback form</a>.
   consent:
     title: Cookie consent
     description: >- 

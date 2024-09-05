@@ -8,7 +8,7 @@ To build the documentation on your local machine, ensure you have Python and pip
 
 ```sh
 # Clone the repository.
-git clone https://github.com/msgport/docs.git && docs
+git clone https://github.com/ringecosystem/msgport-docs.git && docs
 # Install necessary dependencies.
 pip install mkdocs-material mkdocs-git-authors-plugin mkdocs-git-revision-date-localized-plugin mkdocs-meta-descriptions-plugin mkdocs-redirects
 # View the documentation in your browser at `http://127.0.0.1:8000`.
