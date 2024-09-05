@@ -23,7 +23,7 @@ For ease of understanding, we'll be working with an existing contract on the Sep
 
 pragma solidity ^0.8.17;
 
-import "https://github.com/msgport/msgport/blob/main/src/user/Application.sol";
+import "https://github.com/ringecosystem/msgport/blob/main/src/user/Application.sol";
 
 contract Counter is Application {
     event TheNumberIncreased(uint256 fromChainId, address fromDapp, address localPort, uint256 number);
@@ -63,7 +63,7 @@ Create a new Solidity file named **`CounterSender.sol`** and copy the contract
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "https://github.com/msgport/msgport/blob/main/src/interfaces/IMessagePort.sol";
+import "https://github.com/ringecosystem/msgport/blob/main/src/interfaces/IMessagePort.sol";
 
 contract CounterSender {
     event MessageSent(address port, uint256 toChainId, address toDapp, bytes32 msgId);

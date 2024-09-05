@@ -4,7 +4,7 @@
     It's recommended to understand the [core interface](./interfaces.md) of the Msgport before diving into the integration process.
 
 !!! note
-    For those interested in gaining a more in-depth understanding of how Msgport operates, there are some [runnable examples available](https://github.com/msgport/msgport-examples) for reference. This can be a valuable resource to see the Msgport in action.
+    For those interested in gaining a more in-depth understanding of how Msgport operates, there are some [runnable examples available](https://github.com/ringecosystem/msgport-examples) for reference. This can be a valuable resource to see the Msgport in action.
 
 The purpose of this page is to provide a step-by-step guide on how to integrate the Msgport into your application and the concrete steps to follow in the process. By following these instructions, you can quickly and easily integrate Msgport into your application and unlock the potential of cross-chain messaging.
 
@@ -80,7 +80,7 @@ Prior to initiating a cross chain transaction, it's essential to determine the c
 
 Message fees play a critical role in the design of a cross-chain messaging protocol. They represent not just the cost of incorporating cross-chain functionality into your applications, but they also impact the user experience of your application. A thoughtfully constructed fee mechanism is crucial for success.
 
-The cross-chain estimated fee can be obtained through the [Msgport API](https://apidog.msgport.xyz/). For more information on how to use the API, refer to the [documentation](./api.md). Additionally, you can find examples of how to fetch the estimated fee via script in the [Msgport Examples](https://github.com/msgport/msgport-examples) repository.
+The cross-chain estimated fee can be obtained through the [Msgport API](https://apidog.msgport.xyz/). For more information on how to use the API, refer to the [documentation](./api.md). Additionally, you can find examples of how to fetch the estimated fee via script in the [Msgport Examples](https://github.com/ringecosystem/msgport-examples) repository.
 
 ## Send Message
 

@@ -57,7 +57,7 @@ interface IMessagePort {
 
 ### Application
 
-The `Application` contract is typically extended by the receiving application on the destination chain. This extension allows the receiving application to incorporate additional validation checks for the information contained in cross-chain messages. To see this implementation in action, you can examine the provided [runnable examples](https://github.com/msgport/msgport-examples).
+The `Application` contract is typically extended by the receiving application on the destination chain. This extension allows the receiving application to incorporate additional validation checks for the information contained in cross-chain messages. To see this implementation in action, you can examine the provided [runnable examples](https://github.com/ringecosystem/msgport-examples).
 
 ```solidity linenums="1" title="Application.sol"
 pragma solidity ^0.8.17;

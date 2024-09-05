@@ -4,14 +4,14 @@ In the previous section, we have seen how to send messages using Remix. In this 
 
 ## Overview
 
-This example is based on a basic [Counter](https://github.com/msgport/msgport-examples/blob/main/src/counter/src/Counter.sol) smart contract. The contract is simple and easy to understand. A contract with a `number` storage is deployed in the Sepolia testnet, and another contract named [CounterSender](https://github.com/msgport/msgport-examples/blob/main/src/counter/src/CounterSender.sol) is deployed in the [Koi testnet](https://docs.darwinia.network/build/getting-started/networks/koi/). The goal is to call the `increaseNumber()` function of the Sepolia Counter from the Koi testnet CounterSender.
+This example is based on a basic [Counter](https://github.com/ringecosystem/msgport-examples/blob/main/src/counter/src/Counter.sol) smart contract. The contract is simple and easy to understand. A contract with a `number` storage is deployed in the Sepolia testnet, and another contract named [CounterSender](https://github.com/ringecosystem/msgport-examples/blob/main/src/counter/src/CounterSender.sol) is deployed in the [Koi testnet](https://docs.darwinia.network/build/getting-started/networks/koi/). The goal is to call the `increaseNumber()` function of the Sepolia Counter from the Koi testnet CounterSender.
 
 ## Preparation
 
 ### Clone repo and submodules
 
 ```bash
-git clone --recursive https://github.com/msgport/msgport-examples.git
+git clone --recursive https://github.com/ringecosystem/msgport-examples.git
 cd msgport-examples
 ```
 

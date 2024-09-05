@@ -9,4 +9,4 @@ The basic validation materials are provided by the Msgport [Application](../inte
 * `_chainId()`: Returns the chain ID of the source chain. It is recommended to validate it by default.
 * `_xmsgSender()`: Returns the application address in the source chain from which the received message originates. It is recommended to validate it by default.
 
-Since it is recommended that the application receiving the message extends the `Application` contract, these validation materials can be used directly by the application. You can refer to the [examples](https://github.com/msgport/msgport-examples) for more information.
+Since it is recommended that the application receiving the message extends the `Application` contract, these validation materials can be used directly by the application. You can refer to the [examples](https://github.com/ringecosystem/msgport-examples) for more information.

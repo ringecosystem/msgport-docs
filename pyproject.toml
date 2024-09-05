@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "docs"
+name = "msgport-docs"
 version = "0.1.0"
 description = ""
 authors = ["Xavier Lau <xavier@inv.cafe>"]
@@ -7,9 +7,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-mkdocs-material = "^9.5.18"
-mkdocs-git-revision-date-localized-plugin = "^1.2.4"
-mkdocs-git-authors-plugin = "^0.8.0"
+mkdocs-material = "^9.5.34"
+mkdocs-git-revision-date-localized-plugin = "^1.2.7"
+mkdocs-git-authors-plugin = "^0.9.0"
 mkdocs-redirects = "^1.2.0"
 mkdocs-meta-descriptions-plugin = "^3.0.0"
 
