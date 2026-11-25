@@ -23,12 +23,14 @@ jobs:
           pip3 install poetry
           poetry run poetry install --no-root
           poetry run mkdocs build
+          cp package.json site/package.json
       - name: Setup Vercel environment
         uses: actions/checkout@v4
         with:
           repository: darwinia-network/devops
           path: .github
       - name: Deploy to Vercel
+        id: vercel
         uses: ./.github/actions/smart-vercel
         with:
           vercel_token: ${{ secrets.VERCEL_TOKEN }}
@@ -40,6 +42,15 @@ jobs:
           script_run: false
           vercel_json_path: docs/vercel.json
           enable_cache: true
-          enable_notify_slack: true
-          slack_channel: darwinia-docs
-          slack_webhook: ${{ secrets.SLACK_INCOMING_WEBHOOK_URL }}
+
+      - name: Notify Slack
+        uses: rtCamp/action-slack-notify@v2
+        continue-on-error: true
+        env:
+          SLACK_CHANNEL: darwinia-docs
+          SLACK_COLOR: ${{ job.status }}
+          SLACK_ICON: https://avatars.githubusercontent.com/u/14985020?s=48&v=4
+          SLACK_MESSAGE: ${{ steps.vercel.outputs.PREVIEW_LINK }}
+          SLACK_TITLE: Preview
+          SLACK_USERNAME: Vercel
+          SLACK_WEBHOOK: ${{ secrets.SLACK_INCOMING_WEBHOOK_URL }}
