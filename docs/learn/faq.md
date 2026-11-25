@@ -12,4 +12,4 @@ The primary requirement for a network to support the Msgport is EVM (Ethereum Vi
 
 ## How is the cross-chain message fee is calculated?
 
-The msgport interfaces operate independently of the specific messaging protocols, each of which determines the cross-chain message fee differently. For details on ORMP's fee calculation, please refer to the [ORMP Fee](./messaging-protocols/ormp.md#cross-chain-fee).
+The msgport interfaces operate independently of the specific messaging protocols, each of which determines the cross-chain message fee differently. For details on ORMP's fee calculation, please refer to the [ORMP Fee](./messaging-protocols/ormp.md#cross-chain-fee-calculation).
